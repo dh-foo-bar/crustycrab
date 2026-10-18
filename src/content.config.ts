@@ -10,7 +10,6 @@ const recipes = defineCollection({
   loader: glob({ pattern: "*.md", base: "./recipes" }),
   schema: z.object({
     title: z.string(),
-    date: z.coerce.date(),
     cuisine: z.string(),
     protein: z.enum(["chicken", "turkey", "beef", "vegetarian"]),
     protein_detail: z.string(),

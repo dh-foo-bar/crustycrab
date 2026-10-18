@@ -11,7 +11,6 @@ Add a Markdown file to `recipes/`. The file name is the URL slug. Front matter i
 ```markdown
 ---
 title: Gochujang Chicken
-date: 2026-10-14
 cuisine: Korean
 protein: chicken            # chicken | turkey | beef | vegetarian
 protein_detail: Chicken breast

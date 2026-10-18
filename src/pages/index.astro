@@ -3,7 +3,7 @@ import { getCollection } from "astro:content";
 import Base from "../layouts/Base.astro";
 import { url, glowFor, glowStyle, PROTEINS } from "../lib/site";
 
-const recipes = (await getCollection("recipes")).sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+const recipes = (await getCollection("recipes")).sort((a, b) => a.data.title.localeCompare(b.data.title));
 const cuisines = [...new Set(recipes.map((r) => r.data.cuisine))].sort();
 const total = recipes.length;
 ---

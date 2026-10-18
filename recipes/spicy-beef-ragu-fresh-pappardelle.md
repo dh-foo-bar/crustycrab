@@ -1,6 +1,5 @@
 ---
 title: Spicy Beef Ragù with Fresh Pappardelle
-date: 2026-10-18
 cuisine: Italian
 protein: beef
 protein_detail: 93/7 ground beef
