@@ -13,7 +13,7 @@ Add a Markdown file to `recipes/`. The file name is the URL slug. Front matter i
 title: Gochujang Chicken
 short: Gochujang Chicken    # optional; name used on the shopping list
 cuisine: Korean
-protein: chicken            # chicken | turkey | beef | vegetarian
+protein: chicken            # chicken | turkey | beef | pork | lamb | vegetarian
 protein_detail: Chicken breast
 servings: 4
 time_total: 40 min

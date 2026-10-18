@@ -24,7 +24,7 @@ const recipes = defineCollection({
     title: z.string(),
     short: z.string().optional(),
     cuisine: z.string(),
-    protein: z.enum(["chicken", "turkey", "beef", "vegetarian"]),
+    protein: z.enum(["chicken", "turkey", "beef", "pork", "lamb", "vegetarian"]),
     protein_detail: z.string(),
     servings: z.number().int().positive(),
     time_total: z.string(),

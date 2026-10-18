@@ -47,5 +47,7 @@ export const PROTEINS = [
   ["chicken", "Chicken"],
   ["turkey", "Turkey"],
   ["beef", "Beef"],
+  ["pork", "Pork"],
+  ["lamb", "Lamb"],
   ["vegetarian", "Vegetarian"],
 ] as const;
