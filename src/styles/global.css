@@ -496,5 +496,24 @@ body.has-sel .site-foot { padding-bottom: 5rem; }
   .sec-steps strong, .sec-notes strong { color: #111; }
   .sec-notes ul { columns: 1; }
   .sec-notes li { padding: 0.15em 0; border: 0; font-size: 8.5pt; color: #333; }
+
+  /* Tighter print for long recipes */
+  .recipe[data-density="compact"] { font-size: 8.6pt; line-height: 1.3; }
+  .recipe[data-density="compact"] .recipe-title { font-size: 19pt; }
+  .recipe[data-density="compact"] .sec-ingredients li { font-size: 8.2pt; padding: 0.1em 0; }
+  .recipe[data-density="compact"] .sec-steps li { padding-top: 0.25em; padding-bottom: 0.25em; line-height: 1.3; }
+  .recipe[data-density="compact"] .sec-notes li { font-size: 7.8pt; }
+  .recipe[data-density="dense"] { font-size: 7.8pt; line-height: 1.22; }
+  .recipe[data-density="dense"] .recipe-title { font-size: 17pt; }
+  .recipe[data-density="dense"] .recipe-hero .lede { display: none; }
+  .recipe[data-density="dense"] .spec { padding-top: 0.3em; padding-bottom: 0.3em; }
+  .recipe[data-density="dense"] .spec-num { font-size: 12pt; }
+  .recipe[data-density="dense"] .recipe-body h2 { font-size: 10.5pt; margin-bottom: 0.2em; }
+  .recipe[data-density="dense"] .recipe-body h3 { margin-top: 0.4em; font-size: 7.6pt; }
+  .recipe[data-density="dense"] .sec-ingredients li { font-size: 7.6pt; padding: 0.06em 0; line-height: 1.25; }
+  .recipe[data-density="dense"] .sec-steps li { padding-top: 0.2em; padding-bottom: 0.2em; padding-left: 1.5em; line-height: 1.25; }
+  .recipe[data-density="dense"] .sec-steps li::before { font-size: 9.5pt; }
+  .recipe[data-density="dense"] .sec-notes ul { columns: 2; column-gap: 1.4em; }
+  .recipe[data-density="dense"] .sec-notes li { font-size: 7.2pt; break-inside: avoid; }
   li { break-inside: avoid; }
 }

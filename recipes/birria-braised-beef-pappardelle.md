@@ -4,7 +4,7 @@ cuisine: Mexican-Italian
 protein: beef
 protein_detail: Chuck roast or bone-in short ribs
 servings: 6
-time_total: 4 hr 30 min (2 hr 30 min with a pressure cooker)
+time_total: 4 hr 30 min
 time_active: 1 hr 15 min
 kcal: 840
 protein_g: 59

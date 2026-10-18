@@ -6,10 +6,10 @@ protein_detail: 93/7 ground beef
 servings: 4
 time_total: 75 min
 time_active: 30 min
-kcal: 600
+kcal: 590
 protein_g: 39
 carbs_g: 56
-fat_g: 23
+fat_g: 22
 summary: Hand-cut egg pappardelle in a slow-simmered ragù with Calabrian chili and a little cream.
 glow: ["#d83a26", "#f2902e", "#3f7f3b"]  # tomato, chili, basil
 shop:
@@ -19,7 +19,7 @@ shop:
   - { item: Celery, qty: 1, unit: stalk, section: produce }
   - { item: Garlic, qty: 3, unit: clove, section: produce }
   - { item: Basil, qty: 0.25, unit: bunch, section: produce }
-  - { item: Eggs, qty: 4, unit: each, section: dairy }
+  - { item: Eggs, qty: 3, unit: each, section: dairy }
   - { item: Heavy cream, qty: 2, unit: tbsp, section: dairy }
   - { item: Parmigiano, qty: 1, unit: oz, section: dairy }
   - { item: 00 flour, qty: 2, unit: cup, section: pantry }
@@ -37,10 +37,10 @@ shop:
 
 ### Fresh pasta
 
-- 250 g (2 cups) 00 flour, or all-purpose
-- 2 large eggs + 2 large yolks
+- 250 g 00 flour, or all-purpose (weigh it; cup measures vary widely)
+- 3 large eggs
 - Pinch of salt
-- 1–2 tsp water, only if needed
+- Water, only if needed
 - Flour or semolina, for dusting
 
 ### Ragù
@@ -63,7 +63,7 @@ shop:
 
 ## Steps
 
-1. **Make the dough.** In the stand mixer with the dough hook, knead the flour, eggs, yolks and salt for 5–6 minutes until smooth and firm. If it stays crumbly, add water ½ tsp at a time. Wrap tightly and rest 30 minutes at room temperature.
+1. **Make the dough.** In the stand mixer with the dough hook, mix the flour, eggs and salt for 1 minute. If it is still sandy and won't clump when pinched, add water 1 tsp at a time. Knead 5–6 minutes until smooth and firm; if the hook only tumbles it, finish by hand on the counter. Wrap tightly and rest 30 minutes at room temperature.
 2. **Soften the vegetables.** Heat the oil in a heavy pot over medium. Cook the onion, carrot and celery with a pinch of salt for 6–8 minutes until soft.
 3. **Brown the beef.** Raise the heat to medium-high. Add the beef, break it up, and let it take real color, about 8 minutes. Stir in the garlic, tomato paste and chili paste and cook 2 minutes.
 4. **Simmer.** Add the wine and scrape the bottom; reduce 2 minutes. Add the tomatoes, stock and rind. Simmer partially covered for 40 minutes, stirring now and then. Add a splash of stock if it gets thick.
@@ -74,4 +74,4 @@ shop:
 ## Notes
 
 - **Timing:** make the dough first, then roll and cut it while the ragù simmers.
-- **At high altitude (around 5,000 ft):** the dough dries out fast, so keep it wrapped. The sauce reduces faster than at sea level; add stock as needed. Water boils around 202°F, so fresh pasta takes 3–4 minutes instead of 2–3.
+- **At high altitude (around 5,000 ft):** dry air pulls the dough toward crumbly, so expect to add 1–3 tsp water and keep it wrapped. The sauce reduces faster than at sea level; add stock as needed. Water boils around 202°F, so fresh pasta takes 3–4 minutes instead of 2–3.

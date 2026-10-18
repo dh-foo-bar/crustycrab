@@ -99,6 +99,15 @@ export function combine(recipes: ShopRecipe[]): Section[] {
       map.set(key, e);
     }
   }
+  // An item listed without an amount (e.g. "Hot sauce") joins a measured line of the same item.
+  for (const [key, e] of map) {
+    if (e.fam !== "none") continue;
+    const other = [...map.values()].find((o) => o !== e && o.item.toLowerCase() === e.item.toLowerCase());
+    if (other) {
+      for (const u of e.usedIn) if (!other.usedIn.includes(u)) other.usedIn.push(u);
+      map.delete(key);
+    }
+  }
   const sections: Section[] = ORDER.map((id) => ({ id, label: SECTION_LABELS[id], rows: [] }));
   for (const e of map.values()) {
     const sec = sections.find((s) => s.id === e.section) ?? sections[sections.length - 1];

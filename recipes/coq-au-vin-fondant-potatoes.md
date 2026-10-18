@@ -22,7 +22,7 @@ shop:
   - { item: Garlic, qty: 6, unit: clove, section: produce }
   - { item: Fresh thyme, qty: 1, unit: bunch, section: produce }
   - { item: Parsley, qty: 0.25, unit: bunch, section: produce }
-  - { item: Russet potatoes, qty: 2, unit: each, section: produce }
+  - { item: Russet potatoes, qty: 1.5, unit: lb, section: produce }
   - { item: Butter, qty: 6, unit: tbsp, section: dairy }
   - { item: Dry red wine, qty: 2, unit: cup, section: pantry }
   - { item: Chicken stock, qty: 2.5, unit: cup, section: pantry }

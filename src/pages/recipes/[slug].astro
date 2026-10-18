@@ -11,6 +11,9 @@ export async function getStaticPaths() {
 const { recipe } = Astro.props;
 const d = recipe.data;
 const body = sectionize(recipe.rendered?.html ?? "");
+// Longer recipes print with tighter type so they still fit one page.
+const length = (recipe.body ?? "").length;
+const density = length > 3400 ? "dense" : length > 2850 ? "compact" : "normal";
 
 const specs = [
   { value: d.kcal, unit: "kcal", label: "Calories" },
@@ -22,7 +25,7 @@ const specs = [
 ];
 ---
 <Base title={d.title} description={d.summary}>
-  <article class="recipe" style={glowStyle(glowFor(d))}>
+  <article class="recipe" data-density={density} style={glowStyle(glowFor(d))}>
     <header class="recipe-hero">
       <div class="glow glow-hero" aria-hidden="true"></div>
       <div class="wrap recipe-hero-inner">

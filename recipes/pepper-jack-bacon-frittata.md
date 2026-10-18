@@ -12,7 +12,7 @@ fat_g: 32
 summary: A thick cast iron frittata with crispy bacon, garlic and pepper jack, set gently in the oven and finished under the broiler.
 glow: ["#f2c94a", "#b8401f", "#6aa13f"]  # egg, bacon, chives
 shop:
-  - { item: Bacon, qty: 4, unit: each, section: meat }
+  - { item: Bacon, qty: 3, unit: oz, section: meat }
   - { item: Eggs, qty: 5, unit: each, section: dairy }
   - { item: Heavy cream, qty: 2, unit: tbsp, section: dairy }
   - { item: Pepper jack, qty: 2, unit: oz, section: dairy }
