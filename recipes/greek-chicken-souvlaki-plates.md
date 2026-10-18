@@ -12,6 +12,22 @@ carbs_g: 36
 fat_g: 23
 summary: Lemon-oregano chicken seared in cast iron with crispy Yukon wedges, tzatziki and a tomato-cucumber-feta topping.
 glow: ["#f2d04a", "#5f8f4a", "#d9483a"]  # lemon, oregano, tomato
+shop:
+  - { item: Chicken breast, qty: 1.75, unit: lb, section: meat }
+  - { item: Yukon gold potatoes, qty: 1.5, unit: lb, section: produce }
+  - { item: Lemon, qty: 4, unit: each, section: produce }
+  - { item: Garlic, qty: 7, unit: clove, section: produce }
+  - { item: English cucumber, qty: 1, unit: each, section: produce }
+  - { item: Roma tomatoes, qty: 2, unit: each, section: produce }
+  - { item: Red onion, qty: 0.5, unit: each, section: produce }
+  - { item: Fresh dill, qty: 0.25, unit: bunch, section: produce }
+  - { item: Whole-milk Greek yogurt, qty: 1, unit: cup, section: dairy }
+  - { item: Feta, qty: 2, unit: oz, section: dairy }
+  - { item: Dried oregano, qty: 3, unit: tsp, section: spices }
+  - { item: Red pepper flakes, qty: 0.5, unit: tsp, section: spices }
+  - { item: Olive oil, qty: 3.5, unit: tbsp, section: staples }
+  - { item: Kosher salt, qty: 2, unit: tsp, section: staples }
+  - { item: Black pepper, qty: 0.5, unit: tsp, section: staples }
 ---
 
 ## Ingredients

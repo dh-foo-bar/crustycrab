@@ -11,6 +11,23 @@ carbs_g: 66
 fat_g: 16
 summary: Seared chicken cutlets in a sticky gochujang-honey glaze over sesame rice, with charred roasted broccoli.
 glow: ["#c7321f", "#e2a13a", "#4f8a3a"]  # gochujang, honey, broccoli
+shop:
+  - { item: Chicken breast, qty: 1.5, unit: lb, section: meat }
+  - { item: Broccoli, qty: 1.5, unit: lb, section: produce }
+  - { item: Garlic, qty: 3, unit: clove, section: produce }
+  - { item: Fresh ginger, qty: 1, unit: in, section: produce }
+  - { item: Scallions, qty: 1, unit: bunch, section: produce }
+  - { item: Lime, qty: 1, unit: each, section: produce }
+  - { item: Jasmine rice, qty: 1, unit: cup, section: pantry }
+  - { item: Gochujang, qty: 3, unit: tbsp, section: pantry }
+  - { item: Soy sauce, qty: 2, unit: tbsp, section: pantry }
+  - { item: Honey, qty: 1.5, unit: tbsp, section: pantry }
+  - { item: Rice vinegar, qty: 1, unit: tbsp, section: pantry }
+  - { item: Toasted sesame oil, qty: 2, unit: tsp, section: pantry }
+  - { item: Sesame seeds, qty: 1, unit: tbsp, section: pantry }
+  - { item: Neutral oil, qty: 1, unit: tbsp, section: staples }
+  - { item: Olive oil, qty: 1, unit: tbsp, section: staples }
+  - { item: Kosher salt, qty: 1.5, unit: tsp, section: staples }
 ---
 
 ## Ingredients

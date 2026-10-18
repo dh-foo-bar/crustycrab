@@ -12,6 +12,24 @@ carbs_g: 38
 fat_g: 27
 summary: Chuck roast braised low and slow in red wine with carrots and thyme, served over buttery mashed Yukon golds.
 glow: ["#7a1f33", "#e07a2a", "#5e7d4a"]  # red wine, carrot, thyme
+shop:
+  - { item: Chuck roast, qty: 1.75, unit: lb, section: meat }
+  - { item: Yellow onion, qty: 1, unit: each, section: produce }
+  - { item: Carrots, qty: 3, unit: each, section: produce }
+  - { item: Garlic, qty: 4, unit: clove, section: produce }
+  - { item: Fresh thyme, qty: 1, unit: bunch, section: produce }
+  - { item: Yukon gold potatoes, qty: 1.25, unit: lb, section: produce }
+  - { item: Butter, qty: 1.5, unit: tbsp, section: dairy }
+  - { item: Milk, qty: 0.333, unit: cup, section: dairy }
+  - { item: Dry red wine, qty: 2, unit: cup, section: pantry }
+  - { item: Chicken stock, qty: 1.5, unit: cup, section: pantry }
+  - { item: Tomato paste, qty: 2, unit: tbsp, section: pantry }
+  - { item: Red wine vinegar, qty: 1, unit: tsp, section: pantry }
+  - { item: Bay leaves, qty: 2, unit: each, section: spices }
+  - { item: All-purpose flour, qty: 1, unit: tbsp, section: staples }
+  - { item: Neutral oil, qty: 1, unit: tbsp, section: staples }
+  - { item: Kosher salt, qty: 2, unit: tsp, section: staples }
+  - { item: Black pepper, qty: 1, unit: tsp, section: staples }
 ---
 
 ## Ingredients

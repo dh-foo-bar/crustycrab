@@ -11,6 +11,23 @@ carbs_g: 58
 fat_g: 18
 summary: Garlic-chili chicken stir-fried with basil over jasmine rice, with smashed cucumber salad and a crispy fried egg.
 glow: ["#d93b2b", "#3f8a3a", "#f0b43a"]  # chili, basil, egg yolk
+shop:
+  - { item: Chicken breast, qty: 1.75, unit: lb, section: meat }
+  - { item: Garlic, qty: 9, unit: clove, section: produce }
+  - { item: Thai chilies, qty: 7, unit: each, section: produce }
+  - { item: Red onion, qty: 0.5, unit: each, section: produce }
+  - { item: Basil, qty: 2, unit: bunch, section: produce }
+  - { item: English cucumber, qty: 1, unit: each, section: produce }
+  - { item: Cilantro, qty: 0.25, unit: bunch, section: produce }
+  - { item: Eggs, qty: 4, unit: each, section: dairy }
+  - { item: Jasmine rice, qty: 1.25, unit: cup, section: pantry }
+  - { item: Oyster sauce, qty: 2, unit: tbsp, section: pantry }
+  - { item: Fish sauce, qty: 4, unit: tsp, section: pantry }
+  - { item: Soy sauce, qty: 1, unit: tbsp, section: pantry }
+  - { item: Rice vinegar, qty: 2, unit: tbsp, section: pantry }
+  - { item: Neutral oil, qty: 2, unit: tbsp, section: staples }
+  - { item: Sugar, qty: 3, unit: tsp, section: staples }
+  - { item: Kosher salt, qty: 0.5, unit: tsp, section: staples }
 ---
 
 ## Ingredients

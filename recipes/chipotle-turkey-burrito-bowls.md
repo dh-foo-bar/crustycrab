@@ -1,5 +1,6 @@
 ---
 title: Chipotle Turkey and Black Bean Burrito Bowls
+short: Chipotle Turkey Bowls
 cuisine: Mexican
 protein: turkey
 protein_detail: 93% lean ground turkey
@@ -11,6 +12,25 @@ carbs_g: 75
 fat_g: 17
 summary: Smoky chipotle turkey and black beans over cilantro-lime rice with charred corn and quick-pickled red onion.
 glow: ["#9e3b1c", "#f0bf3a", "#4f9a45"]  # chipotle, corn, cilantro
+shop:
+  - { item: Ground turkey (93% lean), qty: 1, unit: lb, section: meat }
+  - { item: Red onion, qty: 1, unit: each, section: produce }
+  - { item: Garlic, qty: 3, unit: clove, section: produce }
+  - { item: Lime, qty: 2, unit: each, section: produce }
+  - { item: Cilantro, qty: 0.5, unit: bunch, section: produce }
+  - { item: Sour cream, qty: 0.25, unit: cup, section: dairy }
+  - { item: Frozen corn, qty: 1.5, unit: cup, section: frozen }
+  - { item: Jasmine rice, qty: 1, unit: cup, section: pantry }
+  - { item: Black beans (15 oz), qty: 1, unit: can, section: pantry }
+  - { item: Chipotles in adobo, qty: 1, unit: can, section: pantry }
+  - { item: Tomato paste, qty: 1, unit: tbsp, section: pantry }
+  - { item: White vinegar, qty: 0.25, unit: cup, section: pantry }
+  - { item: Hot sauce, section: pantry }
+  - { item: Ground cumin, qty: 1.5, unit: tsp, section: spices }
+  - { item: Dried oregano, qty: 1, unit: tsp, section: spices }
+  - { item: Neutral oil, qty: 1, unit: tbsp, section: staples }
+  - { item: Sugar, qty: 1, unit: tsp, section: staples }
+  - { item: Kosher salt, qty: 1.75, unit: tsp, section: staples }
 ---
 
 ## Ingredients

@@ -22,6 +22,7 @@ const total = recipes.length;
       <h2 id="catalog-title" class="section-title">Recipes</h2>
       <p class="count" id="count" aria-live="polite">{total} {total === 1 ? "recipe" : "recipes"}</p>
     </div>
+    <p class="catalog-hint">Tap <span class="hint-plus" aria-hidden="true">+</span> on recipes to combine their ingredients into one shopping list.</p>
 
     <div class="filters" role="group" aria-label="Filter recipes">
       <div class="segmented" role="group" aria-label="Protein">
@@ -54,6 +55,9 @@ const total = recipes.length;
               </p>
             </div>
           </a>
+          {r.data.shop && <button type="button" class="pick" data-slug={r.id} aria-pressed="false" aria-label={`Add ${r.data.title} to shopping list`}>
+            <svg viewBox="0 0 20 20" aria-hidden="true"><path class="pick-plus" d="M10 4v12M4 10h12" /><path class="pick-check" d="M4.5 10.5l3.5 3.5 7.5-8" /></svg>
+          </button>}
         </li>
       ))}
     </ul>
@@ -65,6 +69,23 @@ const total = recipes.length;
   </section>
 
   <script>
+    import { readSelection, toggleSelection } from "../lib/shopping";
+
+    // Add or remove recipes from the shopping list selection.
+    const picks = [...document.querySelectorAll<HTMLButtonElement>(".pick")];
+    const syncPicks = () => {
+      const sel = readSelection();
+      for (const p of picks) {
+        const on = sel.includes(p.dataset.slug!);
+        p.setAttribute("aria-pressed", String(on));
+        p.closest("li")!.classList.toggle("picked", on);
+      }
+    };
+    picks.forEach((p) => p.addEventListener("click", () => toggleSelection(p.dataset.slug!)));
+    window.addEventListener("selection-change", syncPicks);
+    window.addEventListener("pageshow", syncPicks);
+    syncPicks();
+
     const buttons = [...document.querySelectorAll<HTMLButtonElement>(".segmented button")];
     const cuisine = document.getElementById("cuisine") as HTMLSelectElement;
     const items = [...document.querySelectorAll<HTMLLIElement>("#grid li")];

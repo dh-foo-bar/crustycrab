@@ -40,6 +40,9 @@ export function sectionize(html: string): string {
     .join("");
 }
 
+// Short recipe name for compact places like the shopping list.
+export const shortName = (d: { title: string; short?: string }) => d.short ?? d.title.split(/ with | \(/)[0];
+
 export const PROTEINS = [
   ["chicken", "Chicken"],
   ["turkey", "Turkey"],

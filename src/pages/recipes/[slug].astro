@@ -45,6 +45,7 @@ const specs = [
       <p class="specs-note">Calories and macros are per serving.</p>
 
       <div class="actions">
+        {d.shop && <button type="button" class="btn" id="add-list" data-slug={recipe.id} aria-pressed="false">Add to shopping list</button>}
         <button type="button" class="btn" id="print">Print recipe</button>
         <button type="button" class="btn" id="wake" aria-pressed="false" hidden>Keep screen on</button>
       </div>
@@ -54,7 +55,22 @@ const specs = [
   </article>
 
   <script>
+    import { readSelection, toggleSelection } from "../../lib/shopping";
+
     document.getElementById("print")!.addEventListener("click", () => window.print());
+
+    // Add this recipe to the shopping list selection.
+    const add = document.getElementById("add-list") as HTMLButtonElement | null;
+    const syncAdd = () => {
+      if (!add) return;
+      const on = readSelection().includes(add.dataset.slug!);
+      add.setAttribute("aria-pressed", String(on));
+      add.textContent = on ? "On shopping list" : "Add to shopping list";
+    };
+    add?.addEventListener("click", () => toggleSelection(add.dataset.slug!));
+    window.addEventListener("selection-change", syncAdd);
+    window.addEventListener("pageshow", syncAdd);
+    syncAdd();
 
     // Tap an ingredient to check it off while cooking.
     for (const li of document.querySelectorAll<HTMLLIElement>(".sec-ingredients li")) {

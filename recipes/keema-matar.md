@@ -11,6 +11,27 @@ carbs_g: 58
 fat_g: 18
 summary: Spiced ground beef and peas simmered with tomato, ginger and garam masala, served with basmati rice and cucumber-dill raita.
 glow: ["#e0a22a", "#c8452b", "#6aa13f"]  # turmeric, chili, peas
+shop:
+  - { item: Ground beef (93/7), qty: 1.5, unit: lb, section: meat }
+  - { item: Red onion, qty: 1, unit: each, section: produce }
+  - { item: Garlic, qty: 5, unit: clove, section: produce }
+  - { item: Fresh ginger, qty: 1.5, unit: in, section: produce }
+  - { item: Thai chilies, qty: 2, unit: each, section: produce }
+  - { item: Roma tomatoes, qty: 3, unit: each, section: produce }
+  - { item: Lemon, qty: 1, unit: each, section: produce }
+  - { item: Cilantro, qty: 0.5, unit: bunch, section: produce }
+  - { item: English cucumber, qty: 0.5, unit: each, section: produce }
+  - { item: Fresh dill, qty: 0.25, unit: bunch, section: produce }
+  - { item: Whole-milk Greek yogurt, qty: 0.75, unit: cup, section: dairy }
+  - { item: Frozen peas, qty: 1.5, unit: cup, section: frozen }
+  - { item: Basmati rice, qty: 1, unit: cup, section: pantry }
+  - { item: Ground cumin, qty: 1.75, unit: tsp, section: spices }
+  - { item: Ground coriander, qty: 1.5, unit: tsp, section: spices }
+  - { item: Ground turmeric, qty: 0.5, unit: tsp, section: spices }
+  - { item: Cayenne, qty: 1, unit: tsp, section: spices }
+  - { item: Garam masala, qty: 1.5, unit: tsp, section: spices }
+  - { item: Neutral oil, qty: 1, unit: tbsp, section: staples }
+  - { item: Kosher salt, qty: 2, unit: tsp, section: staples }
 ---
 
 ## Ingredients

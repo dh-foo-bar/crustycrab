@@ -1,0 +1,133 @@
+---
+import { getCollection } from "astro:content";
+import Base from "../layouts/Base.astro";
+import { url, shortName, glowFor } from "../lib/site";
+
+const recipes = (await getCollection("recipes")).sort((a, b) => a.data.title.localeCompare(b.data.title));
+const data = recipes.filter((r) => r.data.shop).map((r) => ({
+  slug: r.id,
+  name: shortName(r.data),
+  color: glowFor(r.data)[0],
+  shop: r.data.shop,
+}));
+---
+<Base title="Shopping list" description="Combine the ingredients of several recipes into one shopping list." showBar={false}>
+  <section class="wrap list-page">
+    <a class="back" href={url("/#recipes")}>Recipes</a>
+    <h1 class="list-title">Shopping list</h1>
+    <p class="lede list-lede" id="list-lede">Ingredients from the selected recipes, combined and grouped by section.</p>
+
+    <ul class="list-recipes" id="list-recipes" aria-label="Selected recipes"></ul>
+
+    <div class="actions" id="list-actions">
+      <button type="button" class="btn btn-primary" id="copy">Copy list</button>
+      <button type="button" class="btn" id="print-list">Print list</button>
+      <a class="btn" href={url("/#recipes")}>Add recipes</a>
+    </div>
+
+    <div class="shop" id="shop"></div>
+
+    <div class="list-empty" id="list-empty" hidden>
+      <p>No recipes selected yet. Choose a few recipes and their ingredients will be combined here.</p>
+      <a class="btn btn-primary" href={url("/#recipes")}>Choose recipes</a>
+    </div>
+  </section>
+
+  <script type="application/json" id="shop-data" set:html={JSON.stringify(data)}></script>
+
+  <script>
+    import { combine, asText, readSelection, writeSelection, type ShopRecipe } from "../lib/shopping";
+
+    type R = ShopRecipe & { color: string };
+    const all: R[] = JSON.parse(document.getElementById("shop-data")!.textContent!);
+    const bySlug = new Map(all.map((r) => [r.slug, r]));
+
+    const params = new URLSearchParams(location.search);
+    let selected = (params.has("r") ? params.get("r")!.split(",") : readSelection()).filter((s) => bySlug.has(s));
+    writeSelection(selected);
+
+    const shopEl = document.getElementById("shop")!;
+    const pills = document.getElementById("list-recipes")!;
+    const empty = document.getElementById("list-empty")!;
+    const actions = document.getElementById("list-actions")!;
+    const lede = document.getElementById("list-lede")!;
+
+    function el<K extends keyof HTMLElementTagNameMap>(tag: K, cls?: string, text?: string) {
+      const e = document.createElement(tag);
+      if (cls) e.className = cls;
+      if (text !== undefined) e.textContent = text;
+      return e;
+    }
+
+    function render() {
+      const recipes = selected.map((s) => bySlug.get(s)!);
+      const url = new URL(location.href);
+      if (selected.length) url.searchParams.set("r", selected.join(","));
+      else url.searchParams.delete("r");
+      history.replaceState(null, "", url.toString().replace(/%2C/g, ","));
+
+      empty.hidden = recipes.length > 0;
+      actions.hidden = recipes.length === 0;
+      lede.hidden = recipes.length === 0;
+
+      pills.replaceChildren(...recipes.map((r) => {
+        const li = el("li", "list-pill");
+        const dot = el("span", "list-dot");
+        dot.style.background = r.color;
+        const name = el("span", "", r.name);
+        const rm = el("button", "list-remove", "×");
+        rm.type = "button";
+        rm.setAttribute("aria-label", `Remove ${r.name}`);
+        rm.addEventListener("click", () => {
+          selected = selected.filter((s) => s !== r.slug);
+          writeSelection(selected);
+          render();
+        });
+        li.append(dot, name, rm);
+        return li;
+      }));
+
+      const sections = combine(recipes);
+      shopEl.replaceChildren(...sections.map((s) => {
+        const sec = el("section", `shop-sec shop-${s.id}`);
+        const h = el("h2", "", s.label);
+        const ul = el("ul");
+        for (const row of s.rows) {
+          const li = el("li");
+          li.setAttribute("role", "checkbox");
+          li.setAttribute("aria-checked", "false");
+          li.tabIndex = 0;
+          const main = el("span", "shop-main");
+          main.append(el("span", "shop-item", row.item));
+          if (row.amount) main.append(el("span", "shop-amt", row.amount));
+          li.append(main);
+          if (recipes.length > 1) li.append(el("span", "shop-used", row.usedIn.join(", ")));
+          const toggle = () => li.setAttribute("aria-checked", String(li.getAttribute("aria-checked") !== "true"));
+          li.addEventListener("click", toggle);
+          li.addEventListener("keydown", (e) => {
+            if (e.key === " " || e.key === "Enter") { e.preventDefault(); toggle(); }
+          });
+          ul.append(li);
+        }
+        sec.append(h, ul);
+        return sec;
+      }));
+    }
+
+    const copy = document.getElementById("copy") as HTMLButtonElement;
+    copy.addEventListener("click", async () => {
+      const recipes = selected.map((s) => bySlug.get(s)!);
+      const text = asText(combine(recipes), recipes.map((r) => r.name));
+      try {
+        await navigator.clipboard.writeText(text);
+        copy.textContent = "Copied";
+      } catch {
+        copy.textContent = "Copy failed";
+      }
+      setTimeout(() => (copy.textContent = "Copy list"), 1800);
+    });
+    document.getElementById("print-list")!.addEventListener("click", () => window.print());
+
+    render();
+  </script>
+</Base>

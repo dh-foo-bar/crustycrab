@@ -12,6 +12,25 @@ carbs_g: 56
 fat_g: 23
 summary: Hand-cut egg pappardelle in a slow-simmered ragù with Calabrian chili and a little cream.
 glow: ["#d83a26", "#f2902e", "#3f7f3b"]  # tomato, chili, basil
+shop:
+  - { item: Ground beef (93/7), qty: 1, unit: lb, section: meat }
+  - { item: Yellow onion, qty: 1, unit: each, section: produce }
+  - { item: Carrots, qty: 1, unit: each, section: produce }
+  - { item: Celery, qty: 1, unit: stalk, section: produce }
+  - { item: Garlic, qty: 3, unit: clove, section: produce }
+  - { item: Basil, qty: 0.25, unit: bunch, section: produce }
+  - { item: Eggs, qty: 4, unit: each, section: dairy }
+  - { item: Heavy cream, qty: 2, unit: tbsp, section: dairy }
+  - { item: Parmigiano, qty: 1, unit: oz, section: dairy }
+  - { item: 00 flour, qty: 2, unit: cup, section: pantry }
+  - { item: Crushed San Marzano tomatoes (14.5 oz), qty: 1, unit: can, section: pantry }
+  - { item: Calabrian chili paste, qty: 2, unit: tbsp, section: pantry }
+  - { item: Tomato paste, qty: 2, unit: tbsp, section: pantry }
+  - { item: Dry red wine, qty: 0.5, unit: cup, section: pantry }
+  - { item: Chicken stock, qty: 0.5, unit: cup, section: pantry }
+  - { item: Olive oil, qty: 1, unit: tbsp, section: staples }
+  - { item: Kosher salt, qty: 1, unit: tsp, section: staples }
+  - { item: Black pepper, qty: 0.5, unit: tsp, section: staples }
 ---
 
 ## Ingredients

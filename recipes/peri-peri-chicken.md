@@ -1,5 +1,6 @@
 ---
 title: Peri-Peri Bone-In Chicken with Roasted Potatoes
+short: Peri-Peri Chicken
 cuisine: Portuguese
 protein: chicken
 protein_detail: Bone-in chicken breast
@@ -12,6 +13,17 @@ carbs_g: 32
 fat_g: 30
 summary: Bone-in chicken rubbed with peri-peri, garlic and smoked paprika, roasted on one pan with Yukon gold potatoes.
 glow: ["#d6402a", "#e5b04a", "#8cbf3f"]  # peri-peri, potato, lime
+shop:
+  - { item: Bone-in split chicken breasts, qty: 2.5, unit: lb, section: meat }
+  - { item: Yukon gold potatoes, qty: 1.5, unit: lb, section: produce }
+  - { item: Garlic, qty: 3, unit: clove, section: produce }
+  - { item: Lime, qty: 1, unit: each, section: produce }
+  - { item: Cilantro, qty: 0.25, unit: bunch, section: produce }
+  - { item: Peri-peri sauce, qty: 0.5, unit: cup, section: pantry }
+  - { item: Smoked paprika, qty: 2, unit: tsp, section: spices }
+  - { item: Olive oil, qty: 2, unit: tbsp, section: staples }
+  - { item: Kosher salt, qty: 1.75, unit: tsp, section: staples }
+  - { item: Black pepper, qty: 0.5, unit: tsp, section: staples }
 ---
 
 ## Ingredients

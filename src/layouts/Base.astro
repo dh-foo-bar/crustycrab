@@ -7,8 +7,13 @@ import { url } from "../lib/site";
 interface Props {
   title?: string;
   description?: string;
+  showBar?: boolean;
 }
-const { title, description = "Recipes with clear steps, real timing, and calories and macros for every serving." } = Astro.props;
+const {
+  title,
+  description = "Recipes with clear steps, real timing, and calories and macros for every serving.",
+  showBar = true,
+} = Astro.props;
 ---
 <!doctype html>
 <html lang="en">
@@ -26,7 +31,10 @@ const { title, description = "Recipes with clear steps, real timing, and calorie
     <header class="nav">
       <div class="nav-inner">
         <a class="brand" href={url("/")}><span class="brand-mark" aria-hidden="true"></span>CrustyCrab</a>
-        <nav aria-label="Primary"><a href={url("/#recipes")}>Recipes</a></nav>
+        <nav aria-label="Primary">
+          <a href={url("/#recipes")}>Recipes</a>
+          <a href={url("/list/")}>Shopping list</a>
+        </nav>
       </div>
     </header>
     <main id="main">
@@ -38,5 +46,34 @@ const { title, description = "Recipes with clear steps, real timing, and calorie
         <span>Nutrition values are estimates per serving.</span>
       </div>
     </footer>
+
+    {showBar && (
+      <div class="sel-bar" id="sel-bar" role="region" aria-label="Selected recipes" hidden>
+        <span class="sel-count" id="sel-count" aria-live="polite"></span>
+        <button type="button" class="sel-clear" id="sel-clear">Clear</button>
+        <a class="btn btn-primary" id="sel-go" href={url("/list/")}>Shopping list</a>
+      </div>
+    )}
+
+    <script>
+      import { readSelection, writeSelection } from "../lib/shopping";
+      const bar = document.getElementById("sel-bar");
+      if (bar) {
+        const count = document.getElementById("sel-count")!;
+        const go = document.getElementById("sel-go") as HTMLAnchorElement;
+        const listUrl = `${import.meta.env.BASE_URL.replace(/\/$/, "")}/list/`;
+        const render = () => {
+          const s = readSelection();
+          bar.hidden = s.length === 0;
+          document.body.classList.toggle("has-sel", s.length > 0);
+          count.textContent = `${s.length} ${s.length === 1 ? "recipe" : "recipes"} selected`;
+          go.href = `${listUrl}?r=${s.map(encodeURIComponent).join(",")}`;
+        };
+        document.getElementById("sel-clear")!.addEventListener("click", () => writeSelection([]));
+        window.addEventListener("selection-change", render);
+        window.addEventListener("pageshow", render);
+        render();
+      }
+    </script>
   </body>
 </html>

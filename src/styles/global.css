@@ -52,7 +52,7 @@ img { max-width: 100%; }
 /* ---------- Navigation ---------- */
 .nav {
   position: sticky; top: 0; z-index: 10;
-  background: rgb(14 13 12 / 0.72);
+  background: rgb(14 13 12 / 0.85);
   backdrop-filter: saturate(180%) blur(20px);
   -webkit-backdrop-filter: saturate(180%) blur(20px);
   border-bottom: 1px solid var(--line);
@@ -72,6 +72,7 @@ img { max-width: 100%; }
   background: radial-gradient(circle at 35% 30%, #ffb066, #e2502c 55%, #7a2216);
   box-shadow: 0 0 14px rgb(255 120 60 / 0.55);
 }
+.nav nav { display: flex; gap: 1.25rem; }
 .nav nav a { font-size: 0.875rem; color: var(--muted); text-decoration: none; }
 .nav nav a:hover { color: var(--text); }
 
@@ -199,6 +200,109 @@ img { max-width: 100%; }
 .tile-stats b { color: var(--text); font-weight: 600; }
 
 .empty { padding: 3rem 0; color: var(--muted); }
+
+.catalog-hint { margin: -0.5rem 0 1.25rem; font-size: 0.875rem; color: var(--faint); }
+.hint-plus {
+  display: inline-grid; place-items: center; width: 1.25rem; height: 1.25rem; margin: 0 0.1rem;
+  border-radius: 50%; border: 1px solid var(--line-2); color: var(--text); font-size: 0.8rem; line-height: 1;
+}
+
+/* Add-to-list toggle on each tile */
+.grid li { position: relative; }
+.pick {
+  position: absolute; top: 1rem; right: 1rem; z-index: 2;
+  width: 2.5rem; height: 2.5rem; border-radius: 50%;
+  display: grid; place-items: center;
+  background: rgb(14 13 12 / 0.45); border: 1px solid var(--line-2);
+  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+  color: var(--text); cursor: pointer;
+  transition: background 160ms ease, border-color 160ms ease, transform 160ms ease;
+}
+.pick:hover { background: rgb(14 13 12 / 0.7); }
+.pick:active { transform: scale(0.94); }
+.pick svg { width: 1.1rem; height: 1.1rem; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.pick .pick-check { display: none; }
+.pick[aria-pressed="true"] { background: var(--ember); border-color: var(--ember); color: var(--bg); }
+.pick[aria-pressed="true"] .pick-plus { display: none; }
+.pick[aria-pressed="true"] .pick-check { display: inline; }
+.grid li.picked .tile { border-color: color-mix(in oklab, var(--ember) 55%, transparent); }
+
+/* Selection bar */
+.sel-bar {
+  position: fixed; z-index: 15; left: 50%; bottom: max(1rem, env(safe-area-inset-bottom));
+  transform: translateX(-50%);
+  display: flex; align-items: center; gap: 0.75rem;
+  width: max-content; max-width: calc(100% - 2rem);
+  padding: 0.5rem 0.5rem 0.5rem 1.1rem;
+  background: rgb(32 29 26 / 0.95); border: 1px solid var(--line-2); border-radius: 999px;
+  backdrop-filter: saturate(180%) blur(20px); -webkit-backdrop-filter: saturate(180%) blur(20px);
+  box-shadow: 0 18px 40px -16px rgb(0 0 0 / 0.7);
+  font-size: 0.875rem;
+}
+.sel-bar[hidden] { display: none; }
+.sel-count { white-space: nowrap; font-variant-numeric: tabular-nums; }
+.sel-clear { background: none; border: 0; color: var(--muted); font: inherit; cursor: pointer; padding: 0.4rem; }
+.sel-clear:hover { color: var(--text); }
+.sel-bar .btn { padding: 0.65rem 1rem; white-space: nowrap; }
+body.has-sel .site-foot { padding-bottom: 5rem; }
+
+/* ---------- Shopping list ---------- */
+.list-page { padding-top: clamp(2rem, 6vh, 4rem); padding-bottom: 5rem; }
+.list-title {
+  margin: 1.5rem 0 0;
+  font: 720 clamp(2.6rem, 7.5vw, 4.5rem)/0.98 var(--display);
+  font-stretch: 84%; letter-spacing: -0.02em;
+}
+.list-lede { max-width: 40ch; }
+.list-recipes { list-style: none; margin: 1.75rem 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.list-pill {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  padding: 0.35rem 0.4rem 0.35rem 0.8rem; border-radius: 999px;
+  background: var(--surface); border: 1px solid var(--line); font-size: 0.875rem;
+}
+.list-dot { width: 0.6rem; height: 0.6rem; border-radius: 50%; }
+.list-remove {
+  width: 1.75rem; height: 1.75rem; border-radius: 50%; border: 0; cursor: pointer;
+  background: rgb(255 255 255 / 0.06); color: var(--muted); font-size: 1rem; line-height: 1;
+}
+.list-remove:hover { color: var(--text); background: rgb(255 255 255 / 0.12); }
+.list-page .actions { margin: 1.5rem 0 2rem; }
+.list-page .actions[hidden] { display: none; }
+
+.shop { columns: 1; column-gap: 1.25rem; }
+@media (min-width: 48rem) { .shop { columns: 2; } }
+@media (min-width: 72rem) { .shop { columns: 3; } }
+.shop-sec {
+  break-inside: avoid; display: inline-block; width: 100%;
+  margin: 0 0 1.25rem; padding: 1.25rem 1.25rem 0.5rem;
+  background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-md);
+}
+.shop-sec h2 { margin: 0 0 0.5rem; font: 700 1.25rem/1.2 var(--display); font-stretch: 85%; letter-spacing: -0.01em; }
+.shop-staples { background: transparent; }
+.shop-staples h2 { color: var(--muted); }
+.shop-sec ul { list-style: none; margin: 0; padding: 0; }
+.shop-sec li {
+  position: relative; padding: 0.65rem 0 0.65rem 2rem;
+  border-top: 1px solid var(--line);
+  cursor: pointer; user-select: none; -webkit-tap-highlight-color: transparent;
+}
+.shop-sec li:first-child { border-top: 0; }
+.shop-sec li::before {
+  content: ""; position: absolute; left: 0; top: 0.78rem;
+  width: 1.125rem; height: 1.125rem; border-radius: 50%; border: 1.5px solid var(--line-2);
+}
+.shop-sec li[aria-checked="true"] { color: var(--faint); }
+.shop-sec li[aria-checked="true"] .shop-item { text-decoration: line-through; }
+.shop-sec li[aria-checked="true"]::before {
+  border-color: var(--ember);
+  background: var(--ember) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='10' viewBox='0 0 12 10'%3E%3Cpath d='M1.5 5.2l3 3 6-6.5' fill='none' stroke='%230e0d0c' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat center;
+}
+.shop-main { display: flex; justify-content: space-between; gap: 1rem; align-items: baseline; }
+.shop-item { font-size: 0.9875rem; line-height: 1.4; }
+.shop-amt { flex: none; font-size: 0.875rem; color: var(--muted); font-variant-numeric: tabular-nums; text-align: right; }
+.shop-used { display: block; margin-top: 0.15rem; font-size: 0.75rem; color: var(--faint); line-height: 1.35; }
+.list-empty { padding: 2rem 0; color: var(--muted); max-width: 44ch; }
+.list-empty .btn { margin-top: 0.5rem; }
 
 /* ---------- Recipe ---------- */
 .recipe-hero { position: relative; isolation: isolate; overflow: hidden; }
@@ -335,6 +439,27 @@ img { max-width: 100%; }
 @page { size: letter; margin: 0.75in; }
 
 @media print {
+  .sel-bar, .pick, .catalog-hint { display: none !important; }
+  body.has-sel .site-foot { padding-bottom: 0; }
+  .list-page { padding: 0; }
+  .list-page .back, .list-page .actions, .list-remove { display: none !important; }
+  .list-title { margin: 0; font-size: 20pt; color: #111; }
+  .list-lede { display: none; }
+  .list-recipes { margin: 0.4em 0 0.8em; gap: 0.3em; }
+  .list-pill { padding: 0.1em 0.6em; font-size: 8.5pt; background: none; border-color: #bbb; }
+  .list-dot { display: none; }
+  .shop { columns: 2; column-gap: 1.4em; }
+  .shop-sec { background: none; border: 0; border-radius: 0; padding: 0; margin: 0 0 0.7em; }
+  .shop-sec h2 { font-size: 11pt; margin: 0 0 0.2em; color: #111; border-bottom: 1px solid #111; padding-bottom: 0.15em; }
+  .shop-sec li { padding: 0.18em 0 0.18em 1.3em; border-top: 0.5pt solid #ddd; color: #111; }
+  .shop-sec li::before { top: 0.3em; width: 0.75em; height: 0.75em; border-radius: 2px; border: 0.8pt solid #555; background: none !important; }
+  .shop-sec li[aria-checked="true"] .shop-item { text-decoration: none; }
+  .shop-sec li[aria-checked="true"] { color: #111; }
+  .shop-sec li[aria-checked="true"]::before { border-color: #555; }
+  .shop-item { font-size: 9pt; }
+  .shop-amt { font-size: 8.5pt; color: #333; }
+  .shop-used { font-size: 7pt; color: #777; margin-top: 0; }
+  .list-page ~ *, .list-empty { display: none !important; }
   :root { --text: #111; --muted: #555; --faint: #777; --line: #d4d4d4; --line-2: #bbb; }
   html, body { background: #fff !important; color: #111; }
   body { font-size: 9.5pt; line-height: 1.4; }
