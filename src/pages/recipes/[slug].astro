@@ -1,0 +1,96 @@
+---
+import { getCollection } from "astro:content";
+import Base from "../../layouts/Base.astro";
+import { url, glowFor, glowStyle, sectionize } from "../../lib/site";
+
+export async function getStaticPaths() {
+  const recipes = await getCollection("recipes");
+  return recipes.map((recipe) => ({ params: { slug: recipe.id }, props: { recipe } }));
+}
+
+const { recipe } = Astro.props;
+const d = recipe.data;
+const body = sectionize(recipe.rendered?.html ?? "");
+
+const specs = [
+  { value: d.kcal, unit: "kcal", label: "Calories" },
+  { value: d.protein_g, unit: "g", label: "Protein" },
+  { value: d.carbs_g, unit: "g", label: "Carbs" },
+  { value: d.fat_g, unit: "g", label: "Fat" },
+  { value: d.time_total.replace(/\s*min$/, ""), unit: /min$/.test(d.time_total) ? "min" : "", label: d.time_active ? `Total, ${d.time_active} active` : "Total time" },
+  { value: d.servings, unit: "", label: "Servings" },
+];
+---
+<Base title={d.title} description={d.summary}>
+  <article class="recipe" style={glowStyle(glowFor(d))}>
+    <header class="recipe-hero">
+      <div class="glow glow-hero" aria-hidden="true"></div>
+      <div class="wrap recipe-hero-inner">
+        <a class="back" href={url("/#recipes")}>Recipes</a>
+        <p class="tags"><span>{d.cuisine}</span><span>{d.protein_detail}</span></p>
+        <h1 class="recipe-title">{d.title}</h1>
+        <p class="lede">{d.summary}</p>
+      </div>
+    </header>
+
+    <div class="wrap">
+      <dl class="specs" aria-label="Per serving and timing">
+        {specs.map((s) => (
+          <div class="spec">
+            <dt>{s.label}</dt>
+            <dd><span class="spec-num">{s.value}</span>{s.unit && <span class="spec-unit">{s.unit}</span>}</dd>
+          </div>
+        ))}
+      </dl>
+      <p class="specs-note">Calories and macros are per serving.</p>
+
+      <div class="actions">
+        <button type="button" class="btn" id="print">Print recipe</button>
+        <button type="button" class="btn" id="wake" aria-pressed="false" hidden>Keep screen on</button>
+      </div>
+
+      <div class="recipe-body" set:html={body} />
+    </div>
+  </article>
+
+  <script>
+    document.getElementById("print")!.addEventListener("click", () => window.print());
+
+    // Tap an ingredient to check it off while cooking.
+    for (const li of document.querySelectorAll<HTMLLIElement>(".sec-ingredients li")) {
+      li.setAttribute("role", "checkbox");
+      li.setAttribute("aria-checked", "false");
+      li.tabIndex = 0;
+      const toggle = () => li.setAttribute("aria-checked", String(li.getAttribute("aria-checked") !== "true"));
+      li.addEventListener("click", toggle);
+      li.addEventListener("keydown", (e) => {
+        if (e.key === " " || e.key === "Enter") { e.preventDefault(); toggle(); }
+      });
+    }
+
+    // Keep the screen awake while cooking, where the browser supports it.
+    const wake = document.getElementById("wake") as HTMLButtonElement;
+    if ("wakeLock" in navigator) {
+      wake.hidden = false;
+      let lock: WakeLockSentinel | null = null;
+      const set = (on: boolean) => {
+        wake.setAttribute("aria-pressed", String(on));
+        wake.textContent = on ? "Screen stays on" : "Keep screen on";
+      };
+      const acquire = async () => {
+        try {
+          lock = await navigator.wakeLock.request("screen");
+          set(true);
+          lock.addEventListener("release", () => { if (document.visibilityState === "visible") set(false); });
+        } catch { set(false); }
+      };
+      wake.addEventListener("click", async () => {
+        if (wake.getAttribute("aria-pressed") === "true") { await lock?.release(); lock = null; set(false); }
+        else await acquire();
+      });
+      document.addEventListener("visibilitychange", () => {
+        if (document.visibilityState === "visible" && wake.getAttribute("aria-pressed") === "true") acquire();
+      });
+    }
+  </script>
+</Base>

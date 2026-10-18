@@ -1,0 +1,42 @@
+---
+import "@fontsource-variable/bricolage-grotesque/standard.css";
+import "@fontsource-variable/geist";
+import "../styles/global.css";
+import { url } from "../lib/site";
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+const { title, description = "Recipes with clear steps, real timing, and calories and macros for every serving." } = Astro.props;
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="theme-color" content="#0e0d0c" />
+    <title>{title ? `${title} | CrustyCrab` : "CrustyCrab"}</title>
+    <meta name="description" content={description} />
+    <link rel="icon" href={url("/favicon.svg")} type="image/svg+xml" />
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="nav">
+      <div class="nav-inner">
+        <a class="brand" href={url("/")}><span class="brand-mark" aria-hidden="true"></span>CrustyCrab</a>
+        <nav aria-label="Primary"><a href={url("/#recipes")}>Recipes</a></nav>
+      </div>
+    </header>
+    <main id="main">
+      <slot />
+    </main>
+    <footer class="site-foot">
+      <div class="foot-inner">
+        <span class="brand-small">CrustyCrab</span>
+        <span>Nutrition values are estimates per serving.</span>
+      </div>
+    </footer>
+  </body>
+</html>

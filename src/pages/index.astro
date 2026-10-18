@@ -1,0 +1,97 @@
+---
+import { getCollection } from "astro:content";
+import Base from "../layouts/Base.astro";
+import { url, glowFor, glowStyle, PROTEINS } from "../lib/site";
+
+const recipes = (await getCollection("recipes")).sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+const cuisines = [...new Set(recipes.map((r) => r.data.cuisine))].sort();
+const total = recipes.length;
+---
+<Base>
+  <section class="home-hero">
+    <div class="glow glow-hero" style={glowStyle(["#e2502c", "#f2a33a", "#5f8f3e"])} aria-hidden="true"></div>
+    <div class="wrap home-hero-inner">
+      <h1 class="display">Dinner,<br />dialed in.</h1>
+      <p class="lede">Weeknight and weekend recipes with clear steps, real timing, and calories and macros for every serving.</p>
+      <a class="btn btn-primary" href="#recipes">Browse recipes</a>
+    </div>
+  </section>
+
+  <section class="wrap catalog" id="recipes" aria-labelledby="catalog-title">
+    <div class="catalog-head">
+      <h2 id="catalog-title" class="section-title">Recipes</h2>
+      <p class="count" id="count" aria-live="polite">{total} {total === 1 ? "recipe" : "recipes"}</p>
+    </div>
+
+    <div class="filters" role="group" aria-label="Filter recipes">
+      <div class="segmented" role="group" aria-label="Protein">
+        <button type="button" data-protein="" aria-pressed="true">All</button>
+        {PROTEINS.map(([value, label]) => (
+          <button type="button" data-protein={value} aria-pressed="false">{label}</button>
+        ))}
+      </div>
+      <label class="select">
+        <span class="visually-hidden">Cuisine</span>
+        <select id="cuisine">
+          <option value="">All cuisines</option>
+          {cuisines.map((c) => <option value={c}>{c}</option>)}
+        </select>
+      </label>
+    </div>
+
+    <ul class="grid" id="grid">
+      {recipes.map((r) => (
+        <li data-protein={r.data.protein} data-cuisine={r.data.cuisine}>
+          <a class="tile" href={url(`/recipes/${r.id}/`)} style={glowStyle(glowFor(r.data))}>
+            <div class="glow glow-tile" aria-hidden="true"></div>
+            <div class="tile-body">
+              <p class="tile-tags"><span>{r.data.cuisine}</span><span>{r.data.time_total}</span></p>
+              <h3 class="tile-title">{r.data.title}</h3>
+              <p class="tile-summary">{r.data.summary}</p>
+              <p class="tile-stats">
+                <span><b>{r.data.kcal}</b> kcal</span>
+                <span><b>{r.data.protein_g}</b> g protein</span>
+              </p>
+            </div>
+          </a>
+        </li>
+      ))}
+    </ul>
+
+    <div class="empty" id="empty" hidden>
+      <p>No recipes match these filters.</p>
+      <button type="button" class="btn" id="clear">Clear filters</button>
+    </div>
+  </section>
+
+  <script>
+    const buttons = [...document.querySelectorAll<HTMLButtonElement>(".segmented button")];
+    const cuisine = document.getElementById("cuisine") as HTMLSelectElement;
+    const items = [...document.querySelectorAll<HTMLLIElement>("#grid li")];
+    const count = document.getElementById("count")!;
+    const empty = document.getElementById("empty")!;
+    let protein = "";
+
+    function apply() {
+      let shown = 0;
+      for (const li of items) {
+        const ok = (!protein || li.dataset.protein === protein) && (!cuisine.value || li.dataset.cuisine === cuisine.value);
+        li.hidden = !ok;
+        if (ok) shown++;
+      }
+      count.textContent = `${shown} ${shown === 1 ? "recipe" : "recipes"}`;
+      empty.hidden = shown !== 0;
+    }
+    function setProtein(value: string) {
+      protein = value;
+      buttons.forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.protein === value)));
+      apply();
+    }
+    buttons.forEach((b) => b.addEventListener("click", () => setProtein(b.dataset.protein ?? "")));
+    cuisine.addEventListener("change", apply);
+    document.getElementById("clear")!.addEventListener("click", () => {
+      cuisine.value = "";
+      setProtein("");
+    });
+  </script>
+</Base>
