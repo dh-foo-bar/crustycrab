@@ -1,8 +1,8 @@
 ---
-import "@fontsource-variable/bricolage-grotesque/standard.css";
 import "@fontsource-variable/geist";
 import "../styles/global.css";
 import { url } from "../lib/site";
+import Icon from "../components/Icon.astro";
 
 interface Props {
   title?: string;
@@ -11,7 +11,7 @@ interface Props {
 }
 const {
   title,
-  description = "Recipes with clear steps, real timing, and calories and macros for every serving.",
+  description = "Recipes with clear steps, real timing, and nutrition for every serving.",
   showBar = true,
 } = Astro.props;
 ---
@@ -21,7 +21,7 @@ const {
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="color-scheme" content="dark" />
-    <meta name="theme-color" content="#0e0d0c" />
+    <meta name="theme-color" content="#07090e" />
     <title>{title ? `${title} | CrustyCrab` : "CrustyCrab"}</title>
     <meta name="description" content={description} />
     <link rel="icon" href={url("/favicon.svg")} type="image/svg+xml" />
@@ -30,7 +30,7 @@ const {
     <a class="skip" href="#main">Skip to content</a>
     <header class="nav">
       <div class="nav-inner">
-        <a class="brand" href={url("/")}><span class="brand-mark" aria-hidden="true"></span>CrustyCrab</a>
+        <a class="brand" href={url("/")}><Icon name="atom" class="brand-mark" />CrustyCrab</a>
         <nav aria-label="Primary">
           <a href={url("/#recipes")}>Recipes</a>
           <a href={url("/list/")}>Shopping list</a>

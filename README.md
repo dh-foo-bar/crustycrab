@@ -23,7 +23,6 @@ protein_g: 45
 carbs_g: 60
 fat_g: 18
 summary: One sentence shown on the card and under the title.
-glow: ["#c7321f", "#e59a3b", "#d9c7a1"]   # optional; defaults by cuisine
 shop:                       # optional; what to buy for one batch
   - { item: Chicken breast, qty: 1.5, unit: lb, section: meat }
   - { item: Garlic, qty: 3, unit: clove, section: produce }

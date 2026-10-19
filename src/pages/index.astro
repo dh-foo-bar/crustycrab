@@ -1,18 +1,20 @@
 ---
 import { getCollection } from "astro:content";
 import Base from "../layouts/Base.astro";
-import { url, glowFor, glowStyle, PROTEINS } from "../lib/site";
+import { url, PROTEINS } from "../lib/site";
+import { atomArt, elementSymbols } from "../lib/art";
 
 const recipes = (await getCollection("recipes")).sort((a, b) => a.data.title.localeCompare(b.data.title));
+const symbols = elementSymbols(recipes.map((r) => r.data.title));
 const cuisines = [...new Set(recipes.map((r) => r.data.cuisine))].sort();
 const total = recipes.length;
 ---
 <Base>
   <section class="home-hero">
-    <div class="glow glow-hero" style={glowStyle(["#e2502c", "#f2a33a", "#5f8f3e"])} aria-hidden="true"></div>
     <div class="wrap home-hero-inner">
+      <div class="home-art" set:html={atomArt("crustycrab-home", "home")} />
       <h1 class="display">Dinner,<br />dialed in.</h1>
-      <p class="lede">Weeknight and weekend recipes with clear steps, real timing, and calories and macros for every serving.</p>
+      <p class="lede">Weeknight and weekend recipes with clear steps, real timing, and nutrition for every serving.</p>
       <a class="btn btn-primary" href="#recipes">Browse recipes</a>
     </div>
   </section>
@@ -41,10 +43,11 @@ const total = recipes.length;
     </div>
 
     <ul class="grid" id="grid">
-      {recipes.map((r) => (
+      {recipes.map((r, i) => (
         <li data-protein={r.data.protein} data-cuisine={r.data.cuisine}>
-          <a class="tile" href={url(`/recipes/${r.id}/`)} style={glowStyle(glowFor(r.data))}>
-            <div class="glow glow-tile" aria-hidden="true"></div>
+          <a class="tile" href={url(`/recipes/${r.id}/`)}>
+            <div class="tile-art" set:html={atomArt(r.id, "tile")} />
+            <span class="element" aria-hidden="true"><span class="element-n">{String(i + 1).padStart(2, "0")}</span>{symbols.get(r.data.title)}</span>
             <div class="tile-body">
               <p class="tile-tags"><span>{r.data.cuisine}</span><span>{r.data.time_total}</span></p>
               <h3 class="tile-title">{r.data.title}</h3>

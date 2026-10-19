@@ -1,38 +1,43 @@
 ---
 import { getCollection } from "astro:content";
 import Base from "../../layouts/Base.astro";
-import { url, glowFor, glowStyle, sectionize } from "../../lib/site";
+import { url, sectionize } from "../../lib/site";
+import { atomArt, elementSymbols } from "../../lib/art";
+import Icon from "../../components/Icon.astro";
 
 export async function getStaticPaths() {
-  const recipes = await getCollection("recipes");
-  return recipes.map((recipe) => ({ params: { slug: recipe.id }, props: { recipe } }));
+  const recipes = (await getCollection("recipes")).sort((a, b) => a.data.title.localeCompare(b.data.title));
+  const symbols = elementSymbols(recipes.map((r) => r.data.title));
+  return recipes.map((recipe) => ({ params: { slug: recipe.id }, props: { recipe, symbol: symbols.get(recipe.data.title)! } }));
 }
 
-const { recipe } = Astro.props;
+const { recipe, symbol } = Astro.props;
 const d = recipe.data;
 const body = sectionize(recipe.rendered?.html ?? "");
 // Longer recipes print with tighter type so they still fit one page.
 const length = (recipe.body ?? "").length;
-const density = length > 3400 ? "dense" : length > 2850 ? "compact" : "normal";
+const density = length > 2950 ? "dense" : length > 2850 ? "compact" : "normal";
 
 const specs = [
-  { value: d.kcal, unit: "kcal", label: "Calories" },
-  { value: d.protein_g, unit: "g", label: "Protein" },
-  { value: d.carbs_g, unit: "g", label: "Carbs" },
-  { value: d.fat_g, unit: "g", label: "Fat" },
-  { value: d.time_total.replace(/\s*min$/, ""), unit: /min$/.test(d.time_total) ? "min" : "", label: d.time_active ? `Total, ${d.time_active} active` : "Total time" },
-  { value: d.servings, unit: "", label: "Servings" },
+  { value: d.kcal, unit: "kcal", label: "Calories", icon: "energy" },
+  { value: d.protein_g, unit: "g", label: "Protein", icon: "protein" },
+  { value: d.carbs_g, unit: "g", label: "Carbs", icon: "carbs" },
+  { value: d.fat_g, unit: "g", label: "Fat", icon: "fat" },
+  { value: d.time_total.replace(/\s*min$/, ""), unit: /min$/.test(d.time_total) ? "min" : "", label: d.time_active ? `Total, ${d.time_active} active` : "Total time", icon: "time" },
+  { value: d.servings, unit: "", label: "Servings", icon: "servings" },
 ];
 ---
 <Base title={d.title} description={d.summary}>
-  <article class="recipe" data-density={density} style={glowStyle(glowFor(d))}>
+  <article class="recipe" data-density={density}>
     <header class="recipe-hero">
-      <div class="glow glow-hero" aria-hidden="true"></div>
       <div class="wrap recipe-hero-inner">
+        <div class="recipe-art" set:html={atomArt(recipe.id, "hero")} />
+        <div class="recipe-hero-text">
         <a class="back" href={url("/#recipes")}>Recipes</a>
-        <p class="tags"><span>{d.cuisine}</span><span>{d.protein_detail}</span></p>
+        <p class="tags"><span class="tag-element" aria-hidden="true">{symbol}</span><span>{d.cuisine}</span><span>{d.protein_detail}</span></p>
         <h1 class="recipe-title">{d.title}</h1>
         <p class="lede">{d.summary}</p>
+        </div>
       </div>
     </header>
 
@@ -40,12 +45,12 @@ const specs = [
       <dl class="specs" aria-label="Per serving and timing">
         {specs.map((s) => (
           <div class="spec">
-            <dt>{s.label}</dt>
+            <dt><Icon name={s.icon} />{s.label}</dt>
             <dd><span class="spec-num">{s.value}</span>{s.unit && <span class="spec-unit">{s.unit}</span>}</dd>
           </div>
         ))}
       </dl>
-      <p class="specs-note">Calories and macros are per serving.</p>
+      <p class="specs-note">Nutrition is per serving.</p>
 
       <div class="actions">
         {d.shop && <button type="button" class="btn" id="add-list" data-slug={recipe.id} aria-pressed="false">Add to shopping list</button>}

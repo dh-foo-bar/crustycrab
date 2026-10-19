@@ -1,13 +1,15 @@
 ---
 import { getCollection } from "astro:content";
 import Base from "../layouts/Base.astro";
-import { url, shortName, glowFor } from "../lib/site";
+import { url, shortName } from "../lib/site";
+import Icon from "../components/Icon.astro";
+const SECTION_ICONS = ["produce", "meat", "dairy", "frozen", "pantry", "spices", "staples"];
 
 const recipes = (await getCollection("recipes")).sort((a, b) => a.data.title.localeCompare(b.data.title));
-const data = recipes.filter((r) => r.data.shop).map((r) => ({
+const data = recipes.filter((r) => r.data.shop).map((r, i) => ({
   slug: r.id,
   name: shortName(r.data),
-  color: glowFor(r.data)[0],
+  color: i % 2 ? "#7cc4ff" : "#ff9a52",
   shop: r.data.shop,
 }));
 ---
@@ -32,6 +34,8 @@ const data = recipes.filter((r) => r.data.shop).map((r) => ({
       <a class="btn btn-primary" href={url("/#recipes")}>Choose recipes</a>
     </div>
   </section>
+
+  {SECTION_ICONS.map((n) => <template id={`icon-${n}`}><Icon name={n} /></template>)}
 
   <script type="application/json" id="shop-data" set:html={JSON.stringify(data)}></script>
 
@@ -90,7 +94,10 @@ const data = recipes.filter((r) => r.data.shop).map((r) => ({
       const sections = combine(recipes);
       shopEl.replaceChildren(...sections.map((s) => {
         const sec = el("section", `shop-sec shop-${s.id}`);
-        const h = el("h2", "", s.label);
+        const h = el("h2");
+        const tpl = document.getElementById(`icon-${s.id}`) as HTMLTemplateElement | null;
+        if (tpl) h.append(tpl.content.cloneNode(true));
+        h.append(document.createTextNode(s.label));
         const ul = el("ul");
         for (const row of s.rows) {
           const li = el("li");

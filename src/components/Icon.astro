@@ -1,0 +1,31 @@
+---
+// Hairline icons drawn in the same atomic, line-only style as the recipe art.
+interface Props { name: string; class?: string }
+const { name, class: cls = "" } = Astro.props;
+
+const paths: Record<string, string> = {
+  // Brand: an atom
+  atom: `<ellipse cx="12" cy="12" rx="10" ry="3.8"/><ellipse cx="12" cy="12" rx="10" ry="3.8" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="10" ry="3.8" transform="rotate(120 12 12)"/><circle class="fill" cx="12" cy="12" r="1.7"/>`,
+  // Calories: energy levels with a transition arrow
+  energy: `<path d="M10 19.5h10M12 12h8M14 4.5h6"/><path d="M5.5 19.5V5M3 7.5 5.5 5 8 7.5"/>`,
+  // Protein: a peptide chain
+  protein: `<circle cx="4.5" cy="16" r="2.2"/><circle cx="12" cy="8" r="2.2"/><circle cx="19.5" cy="16" r="2.2"/><path d="M6.1 14.4 10.4 9.6M13.6 9.6l4.3 4.8"/>`,
+  // Carbs: a sugar ring
+  carbs: `<path d="M12 4.5 18.5 8.25v7.5L12 19.5 5.5 15.75v-7.5Z"/><circle class="fill" cx="12" cy="4.5" r="1.1"/>`,
+  // Fat: a fatty-acid chain
+  fat: `<circle cx="4" cy="15" r="2"/><path d="M5.8 14 9 9l3.5 6 3.5-6 3.5 6"/>`,
+  // Time: a clock with an orbiting electron
+  time: `<circle cx="12" cy="12" r="8"/><path d="M12 7.5V12l3 2"/><circle class="fill" cx="17.7" cy="6.3" r="1.2"/>`,
+  // Servings: a four-atom molecule
+  servings: `<circle cx="7" cy="7" r="2"/><circle cx="17" cy="7" r="2"/><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/><path d="M9 7h6M9 17h6M7 9v6M17 9v6"/>`,
+  // Shopping sections
+  produce: `<path d="M5 19C5 10 10.5 5 19 5c0 8.5-5 14-14 14Z"/><path d="M5 19 14 10"/>`,
+  meat: `<path d="M4.5 13.5c0-4.5 3.8-8 8.5-8 4 0 6.5 2.6 6.5 5.8 0 4.4-4.4 7.2-9 7.2-3.6 0-6-2.1-6-5Z"/><ellipse cx="14.5" cy="11" rx="2.2" ry="1.6"/>`,
+  dairy: `<path d="M12 4s-6 6.8-6 11a6 6 0 0 0 12 0c0-4.2-6-11-6-11Z"/>`,
+  frozen: `<path d="M12 3v18M4.2 7.5l15.6 9M4.2 16.5l15.6-9"/><path d="M10 4.5 12 6l2-1.5M10 19.5 12 18l2 1.5"/>`,
+  pantry: `<rect x="6.5" y="8" width="11" height="12" rx="2"/><path d="M8 8V5h8v3M6.5 12.5h11"/>`,
+  spices: `<circle cx="12" cy="6" r="2"/><circle cx="6" cy="17" r="2"/><circle cx="18" cy="17" r="2"/><path d="M11 7.8 7 15.2M13 7.8l4 7.4M8 17h8"/>`,
+  staples: `<path d="M10 4h4M10.5 4v5.5L5.5 19h13l-5-9.5V4"/><path d="M7.6 15h8.8"/>`,
+};
+---
+<svg class={`icon ${cls}`} viewBox="0 0 24 24" aria-hidden="true" focusable="false" set:html={paths[name] ?? ""} />
