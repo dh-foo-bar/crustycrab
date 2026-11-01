@@ -54,8 +54,8 @@ Makes one 9x13 pan.
 
 1. **Prep.** Heat the oven to 400°F with a rack in the middle, and butter the pan. Slice the potatoes on a mandoline without rinsing them; their starch helps thicken the sauce.
 2. **Start the sauce.** Melt 3 tbsp of the butter in a large, wide pot over medium. Cook the shallot 2 minutes until soft, add the garlic for 1 minute without browning, then stir in the flour for 1 minute.
-3. **Add the liquid.** Slowly whisk in the milk, cream and stock until smooth. Whisk in the Dijon, salt, pepper and nutmeg, and add the thyme and bay leaf.
-4. **Simmer the potatoes.** Add the potatoes and bring to a gentle simmer over medium-low. Cook 12–15 minutes, folding up from the bottom every minute or two so nothing scorches, until the slices bend but hold together. Taste the sauce; it should be boldly seasoned, since the potatoes soak up salt as they bake.
+3. **Add the liquid.** Slowly whisk in the milk, cream and stock until no lumps of flour remain; it will still be thin. Whisk in the Dijon, salt, pepper and nutmeg, and add the thyme and bay leaf.
+4. **Simmer the potatoes.** Add the potatoes and bring to a gentle simmer over medium-low. Cook 12–15 minutes, folding up from the bottom every minute or two so nothing scorches, until the slices bend but hold together and the sauce has thickened to a thin gravy. Taste the sauce; it should be boldly seasoned, since the potatoes soak up salt as they bake.
 5. **Fill the pan.** Remove the thyme stems and bay leaf and pour everything into the pan. Press the potatoes level; they should be just covered in sauce. Dot with the remaining 1 tbsp butter.
 6. **Bake.** Set the pan on a sheet pan to catch drips. Bake uncovered 30–40 minutes, until golden brown, bubbling at the edges, and a knife slides through with no resistance.
 7. **Rest.** Rest at least 15 minutes so the sauce sets, then scatter the chives over the top.
