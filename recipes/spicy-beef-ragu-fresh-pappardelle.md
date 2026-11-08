@@ -10,6 +10,7 @@ kcal: 590
 protein_g: 39
 carbs_g: 56
 fat_g: 22
+added: 2026-10-18
 summary: Hand-cut egg pappardelle in a slow-simmered ragù with Calabrian chili and a little cream.
 glow: ["#d83a26", "#f2902e", "#3f7f3b"]  # tomato, chili, basil
 shop:

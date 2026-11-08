@@ -10,6 +10,7 @@ kcal: 370
 protein_g: 41
 carbs_g: 10
 fat_g: 18
+added: 2026-10-18
 summary: Seared chicken breasts roasted under a lemon, garlic and thyme oil, with asparagus added partway so both finish together.
 glow: ["#f2d04a", "#5f8f3e", "#e9d8b0"]  # lemon, asparagus, garlic
 shop:

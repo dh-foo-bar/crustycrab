@@ -11,6 +11,7 @@ kcal: 600
 protein_g: 51
 carbs_g: 32
 fat_g: 30
+added: 2026-10-18
 summary: Bone-in chicken rubbed with peri-peri, garlic and smoked paprika, roasted on one pan with Yukon gold potatoes.
 glow: ["#d6402a", "#e5b04a", "#8cbf3f"]  # peri-peri, potato, lime
 shop:

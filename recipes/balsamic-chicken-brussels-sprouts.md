@@ -10,6 +10,7 @@ kcal: 450
 protein_g: 46
 carbs_g: 25
 fat_g: 19
+added: 2026-10-18
 summary: Seared chicken breasts brushed with a balsamic-Dijon glaze and roasted alongside caramelized Brussels sprouts on two sheet pans.
 glow: ["#4a2230", "#6aa13f", "#d9a62a"]  # balsamic, sprouts, Dijon
 shop:

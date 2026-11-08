@@ -9,6 +9,7 @@ kcal: 590
 protein_g: 48
 carbs_g: 58
 fat_g: 18
+added: 2026-10-18
 summary: Spiced ground beef and peas simmered with tomato, ginger and garam masala, served with basmati rice and cucumber-dill raita.
 glow: ["#e0a22a", "#c8452b", "#6aa13f"]  # turmeric, chili, peas
 shop:

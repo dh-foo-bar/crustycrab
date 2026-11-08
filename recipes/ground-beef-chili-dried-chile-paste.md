@@ -10,6 +10,7 @@ kcal: 250
 protein_g: 21
 carbs_g: 24
 fat_g: 7
+added: 2026-10-18
 summary: A big pot of beef and bean chili built on a toasted guajillo, ancho and árbol paste for fruity, earthy depth with a moderate kick.
 glow: ["#9e2b1c", "#c8742b", "#5a3a2a"]  # guajillo, ancho, beans
 shop:

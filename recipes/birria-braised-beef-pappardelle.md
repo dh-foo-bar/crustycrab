@@ -10,6 +10,7 @@ kcal: 840
 protein_g: 59
 carbs_g: 56
 fat_g: 39
+added: 2026-10-18
 summary: Beef braised in a smoky guajillo-ancho birria adobo, shredded and tossed with hand-cut egg pappardelle, finished with cotija, cilantro and lime.
 glow: ["#9e2b1c", "#e0a22a", "#3f9a4a"]  # adobo, egg pasta, cilantro
 shop:

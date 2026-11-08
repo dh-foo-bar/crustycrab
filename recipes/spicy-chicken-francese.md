@@ -10,6 +10,7 @@ kcal: 590
 protein_g: 57
 carbs_g: 17
 fat_g: 32
+added: 2026-10-18
 summary: Egg-battered chicken cutlets in a lemon-garlic butter sauce with a serrano kick, alongside crisp roasted Brussels sprouts.
 glow: ["#f2c94a", "#6aa13f", "#c4321f"]  # egg batter, sprouts, serrano
 shop:

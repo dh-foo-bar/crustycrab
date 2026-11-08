@@ -10,6 +10,7 @@ kcal: 1460
 protein_g: 72
 carbs_g: 59
 fat_g: 105
+added: 2026-10-18
 summary: Thick steaks cooked gently on the grill, then seared hard and butter-basted in cast iron, with bright chimichurri, garlic mashed potatoes and charred asparagus.
 glow: ["#8a3b1f", "#4f8a4b", "#e9d8b0"]  # crust, chimichurri, mash
 shop:

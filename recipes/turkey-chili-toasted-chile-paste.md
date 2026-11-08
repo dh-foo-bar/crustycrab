@@ -11,6 +11,7 @@ kcal: 600
 protein_g: 45
 carbs_g: 53
 fat_g: 21
+added: 2026-10-25
 summary: Seared ground turkey and three kinds of beans simmered in a toasted guajillo, ancho and árbol paste, thickened with masa and finished with lime.
 glow: ["#9e2b1c", "#d98a2b", "#5f7f3a"]  # guajillo, cumin, poblano
 shop:

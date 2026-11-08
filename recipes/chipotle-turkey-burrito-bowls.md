@@ -10,6 +10,7 @@ kcal: 585
 protein_g: 33
 carbs_g: 75
 fat_g: 17
+added: 2026-10-18
 summary: Smoky chipotle turkey and black beans over cilantro-lime rice with charred corn and quick-pickled red onion.
 glow: ["#9e3b1c", "#f0bf3a", "#4f9a45"]  # chipotle, corn, cilantro
 shop:

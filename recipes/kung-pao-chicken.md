@@ -10,6 +10,7 @@ kcal: 640
 protein_g: 51
 carbs_g: 68
 fat_g: 18
+added: 2026-10-25
 summary: Seared chicken breast tossed with blistered dried chiles, scallions, peppers and peanuts in a glossy sweet-sour soy sauce, served over jasmine rice.
 glow: ["#c4321f", "#e0a22a", "#6aa13f"]  # dried chile, peanut, scallion
 shop:

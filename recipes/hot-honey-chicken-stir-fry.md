@@ -9,6 +9,7 @@ kcal: 530
 protein_g: 44
 carbs_g: 59
 fat_g: 15
+added: 2026-10-18
 summary: Thin-sliced chicken breast and crisp vegetables glazed in a soy and hot honey sauce, served over rice.
 glow: ["#c4321f", "#e2a13a", "#6aa13f"]  # chili, honey, green onion
 shop:

@@ -4,8 +4,11 @@ import Base from "../layouts/Base.astro";
 import { url, PROTEINS } from "../lib/site";
 import { atomArt, elementSymbols } from "../lib/art";
 
-const recipes = (await getCollection("recipes")).sort((a, b) => a.data.title.localeCompare(b.data.title));
-const symbols = elementSymbols(recipes.map((r) => r.data.title));
+const byTitle = (await getCollection("recipes")).sort((a, b) => a.data.title.localeCompare(b.data.title));
+// Symbols are assigned in title order so they match the recipe pages.
+const symbols = elementSymbols(byTitle.map((r) => r.data.title));
+// Newest first; recipes added the same day stay alphabetical.
+const recipes = [...byTitle].sort((a, b) => b.data.added.getTime() - a.data.added.getTime());
 const cuisines = [...new Set(recipes.map((r) => r.data.cuisine))].sort();
 const total = recipes.length;
 ---
@@ -47,7 +50,7 @@ const total = recipes.length;
         <li data-protein={r.data.protein} data-cuisine={r.data.cuisine}>
           <a class="tile" href={url(`/recipes/${r.id}/`)}>
             <div class="tile-art" set:html={atomArt(r.id, "tile")} />
-            <span class="element" aria-hidden="true"><span class="element-n">{String(i + 1).padStart(2, "0")}</span>{symbols.get(r.data.title)}</span>
+            <span class="element" aria-hidden="true"><span class="element-n">{String(total - i).padStart(2, "0")}</span>{symbols.get(r.data.title)}</span>
             <div class="tile-body">
               <p class="tile-tags"><span>{r.data.cuisine}</span><span>{r.data.time_total}</span></p>
               <h3 class="tile-title">{r.data.title}</h3>

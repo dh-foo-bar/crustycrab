@@ -11,6 +11,7 @@ kcal: 510
 protein_g: 60
 carbs_g: 12
 fat_g: 25
+added: 2026-11-01
 summary: Chicken cutlets marinated in spiced yogurt, lemon and garlic, grilled with zucchini, peppers and red onion and finished with a lemon-garlic drizzle and garlic yogurt sauce.
 glow: ["#d9892b", "#e9d8b0", "#5f8f3e"]  # cumin and paprika, yogurt, grilled zucchini
 shop:

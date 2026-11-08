@@ -10,6 +10,7 @@ kcal: 390
 protein_g: 19
 carbs_g: 1
 fat_g: 34
+added: 2026-10-18
 summary: A pale, smooth rolled omelette with small, tender curds, cooked a little longer than the classic so the center sets firm.
 glow: ["#f2d04a", "#f6e7b8", "#5f8f3e"]  # yolk, butter, chives
 shop:

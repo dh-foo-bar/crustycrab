@@ -10,6 +10,7 @@ kcal: 420
 protein_g: 52
 carbs_g: 5
 fat_g: 21
+added: 2026-10-18
 summary: Bone-in breasts in a quick lemon, garlic, Dijon and smoked paprika marinade, seared skin-down and finished on a rack in a convection oven for crisp skin.
 glow: ["#f2d04a", "#c8742b", "#5f8f3e"]  # lemon, paprika, oregano
 shop:

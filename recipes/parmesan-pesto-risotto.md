@@ -10,6 +10,7 @@ kcal: 800
 protein_g: 23
 carbs_g: 81
 fat_g: 41
+added: 2026-10-18
 summary: A big pot of creamy Parmesan risotto, split at the end so half gets stirred through with basil pesto for two flavors from one batch.
 glow: ["#f2e6c8", "#d9a62a", "#4f8a4b"]  # rice, Parmesan, pesto
 shop:

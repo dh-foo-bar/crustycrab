@@ -10,6 +10,7 @@ kcal: 500
 protein_g: 50
 carbs_g: 24
 fat_g: 22
+added: 2026-10-18
 summary: Large bone-in chicken breasts rubbed with paprika, cumin and coriander and seared crisp, alongside Yukon gold scalloped potatoes baked in a smoked paprika cream.
 glow: ["#c8742b", "#e9d8b0", "#5f8f3e"]  # paprika, cream potatoes, chives
 shop:

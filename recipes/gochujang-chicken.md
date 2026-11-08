@@ -9,6 +9,7 @@ kcal: 600
 protein_g: 48
 carbs_g: 66
 fat_g: 16
+added: 2026-10-18
 summary: Seared chicken cutlets in a sticky gochujang-honey glaze over sesame rice, with charred roasted broccoli.
 glow: ["#c7321f", "#e2a13a", "#4f8a3a"]  # gochujang, honey, broccoli
 shop:

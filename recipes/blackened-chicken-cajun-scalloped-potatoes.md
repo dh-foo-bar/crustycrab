@@ -11,6 +11,7 @@ kcal: 620
 protein_g: 60
 carbs_g: 34
 fat_g: 27
+added: 2026-11-01
 summary: Spice-crusted chicken cutlets seared dark in cast iron, served with Yukon golds simmered in Cajun-spiced cream and baked under pepper jack.
 glow: ["#8a3b1f", "#e9d8b0", "#6aa13f"]  # blackened crust, cream potatoes, scallion
 shop:

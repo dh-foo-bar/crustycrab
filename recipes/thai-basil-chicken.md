@@ -9,6 +9,7 @@ kcal: 640
 protein_g: 57
 carbs_g: 58
 fat_g: 18
+added: 2026-10-18
 summary: Garlic-chili chicken stir-fried with basil over jasmine rice, with smashed cucumber salad and a crispy fried egg.
 glow: ["#d93b2b", "#3f8a3a", "#f0b43a"]  # chili, basil, egg yolk
 shop:

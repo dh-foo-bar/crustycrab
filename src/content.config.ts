@@ -33,6 +33,7 @@ const recipes = defineCollection({
     protein_g: z.number().nonnegative(),
     carbs_g: z.number().nonnegative(),
     fat_g: z.number().nonnegative(),
+    added: z.coerce.date(),
     summary: z.string(),
     glow: z.array(hex).length(3).optional(),
     shop: z.array(shopItem).min(1).optional(),

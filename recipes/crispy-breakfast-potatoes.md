@@ -10,6 +10,7 @@ kcal: 290
 protein_g: 5
 carbs_g: 39
 fat_g: 14
+added: 2026-10-18
 summary: Yukon golds parboiled in alkaline water, roughed up into a starchy paste and roasted hot into a thick, craggy crust with a creamy middle.
 glow: ["#c8742b", "#e0a22a", "#5f8f3e"]  # paprika crust, golden potato, chives
 shop:

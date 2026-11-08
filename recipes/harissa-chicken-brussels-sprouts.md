@@ -10,6 +10,7 @@ kcal: 480
 protein_g: 46
 carbs_g: 30
 fat_g: 20
+added: 2026-10-18
 summary: Seared chicken breasts and Brussels sprouts roasted under a spicy-sweet harissa, honey and lemon glaze.
 glow: ["#b8401f", "#6aa13f", "#e0a22a"]  # harissa, sprouts, honey
 shop:

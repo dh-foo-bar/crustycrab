@@ -10,6 +10,7 @@ kcal: 1280
 protein_g: 55
 carbs_g: 72
 fat_g: 85
+added: 2026-10-18
 summary: Chicken legs braised in red wine with bacon, browned mushrooms and pearl onions, served over potatoes seared crisp and braised in butter and stock.
 glow: ["#6b2131", "#c58b3d", "#5e7d4a"]  # red wine, potato crust, parsley
 shop:

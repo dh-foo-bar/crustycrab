@@ -10,6 +10,7 @@ kcal: 930
 protein_g: 67
 carbs_g: 78
 fat_g: 38
+added: 2026-10-18
 summary: Dry-brined, spice-rubbed chicken breasts seared in cast iron and roasted, sliced over creamy lemon-garlic risotto with a white wine pan jus.
 glow: ["#c8742b", "#f2d04a", "#5f8f3e"]  # paprika, lemon, parsley
 shop:

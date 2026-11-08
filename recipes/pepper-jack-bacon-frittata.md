@@ -9,6 +9,7 @@ kcal: 415
 protein_g: 28
 carbs_g: 3
 fat_g: 32
+added: 2026-10-18
 summary: A thick cast iron frittata with crispy bacon, garlic and pepper jack, set gently in the oven and finished under the broiler.
 glow: ["#f2c94a", "#b8401f", "#6aa13f"]  # egg, bacon, chives
 shop:

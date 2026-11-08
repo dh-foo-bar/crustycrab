@@ -10,6 +10,7 @@ kcal: 630
 protein_g: 42
 carbs_g: 38
 fat_g: 27
+added: 2026-10-18
 summary: Chuck roast braised low and slow in red wine with carrots and thyme, served over buttery mashed Yukon golds.
 glow: ["#7a1f33", "#e07a2a", "#5e7d4a"]  # red wine, carrot, thyme
 shop:

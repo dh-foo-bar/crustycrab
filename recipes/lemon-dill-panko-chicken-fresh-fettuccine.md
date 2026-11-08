@@ -10,6 +10,7 @@ kcal: 1000
 protein_g: 63
 carbs_g: 91
 fat_g: 41
+added: 2026-10-18
 summary: Crisp panko cutlets over hand-rolled fettuccine tossed in a butter sauce built on reduced chicken stock, finished with lemon and dill.
 glow: ["#d9a35a", "#f2d04a", "#5f8f3e"]  # panko, lemon, dill
 shop:

@@ -10,6 +10,7 @@ kcal: 600
 protein_g: 33
 carbs_g: 54
 fat_g: 26
+added: 2026-10-18
 summary: A dark chocolate-brown roux, the holy trinity, smoky andouille and shredded chicken breast simmered into a deep, spicy gumbo over white rice.
 glow: ["#5a3a2a", "#b8401f", "#4f8a4b"]  # dark roux, andouille, green onion
 shop:

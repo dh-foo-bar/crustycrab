@@ -10,6 +10,7 @@ kcal: 385
 protein_g: 42
 carbs_g: 11
 fat_g: 19
+added: 2026-10-18
 summary: Seared chicken breasts brushed with a soy, sesame and fresh ginger sauce and roasted with asparagus, finished with toasted sesame seeds.
 glow: ["#c98a3a", "#6f8f3a", "#e9d8b0"]  # sesame oil, asparagus, ginger
 shop:

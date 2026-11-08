@@ -10,6 +10,7 @@ kcal: 420
 protein_g: 24
 carbs_g: 20
 fat_g: 26
+added: 2026-10-18
 summary: Pork shoulder simmered in a Dutch oven until it shreds, then finished with hominy in a strained guajillo, ancho and árbol broth and piled with crisp toppings.
 glow: ["#a8321f", "#e8e2d0", "#3f9a4a"]  # chile broth, hominy, cilantro
 shop:

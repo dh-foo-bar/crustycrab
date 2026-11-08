@@ -9,6 +9,7 @@ kcal: 560
 protein_g: 28
 carbs_g: 30
 fat_g: 37
+added: 2026-10-18
 summary: Thin, crispy-edged patties smashed hard in a ripping-hot cast iron pan and stacked on butter-toasted buns with American cheese.
 glow: ["#8a3b1f", "#f2b23e", "#d9c7a1"]  # crust, cheese, bun
 shop:

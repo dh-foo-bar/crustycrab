@@ -10,6 +10,7 @@ kcal: 680
 protein_g: 43
 carbs_g: 68
 fat_g: 24
+added: 2026-10-18
 summary: Thin, flour-dredged chicken cutlets seared in cast iron with a lemon, caper and white wine butter sauce, tossed with fettuccine.
 glow: ["#f2d04a", "#d79a4a", "#4f7a3a"]  # lemon, golden cutlet, caper
 shop:

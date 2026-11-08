@@ -10,6 +10,7 @@ kcal: 585
 protein_g: 57
 carbs_g: 36
 fat_g: 23
+added: 2026-10-18
 summary: Lemon-oregano chicken seared in cast iron with crispy Yukon wedges, tzatziki and a tomato-cucumber-feta topping.
 glow: ["#f2d04a", "#5f8f4a", "#d9483a"]  # lemon, oregano, tomato
 shop:

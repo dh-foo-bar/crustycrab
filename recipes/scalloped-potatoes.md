@@ -10,6 +10,7 @@ kcal: 225
 protein_g: 4
 carbs_g: 23
 fat_g: 13
+added: 2026-11-01
 summary: Classic, cheese-free scalloped potatoes, simmered on the stove in a garlicky thyme, Dijon and cream sauce so they bake up tender and saucy.
 glow: ["#e9d8b0", "#c8742b", "#5f8f3e"]  # cream, browned top, chives
 shop:

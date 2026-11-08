@@ -10,6 +10,7 @@ kcal: 485
 protein_g: 15
 carbs_g: 58
 fat_g: 22
+added: 2026-10-18
 summary: A big pot of chunky Yukon gold soup with roasted garlic, where blended cauliflower does the work of the cream and a small splash rounds it out.
 glow: ["#e9d8b0", "#d9a62a", "#5f8f3e"]  # potato, cheddar, chives
 shop:

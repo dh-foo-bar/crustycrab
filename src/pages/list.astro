@@ -5,7 +5,9 @@ import { url, shortName } from "../lib/site";
 import Icon from "../components/Icon.astro";
 const SECTION_ICONS = ["produce", "meat", "dairy", "frozen", "pantry", "spices", "staples"];
 
-const recipes = (await getCollection("recipes")).sort((a, b) => a.data.title.localeCompare(b.data.title));
+const recipes = (await getCollection("recipes"))
+  .sort((a, b) => a.data.title.localeCompare(b.data.title))
+  .sort((a, b) => b.data.added.getTime() - a.data.added.getTime());
 const data = recipes.filter((r) => r.data.shop).map((r, i) => ({
   slug: r.id,
   name: shortName(r.data),

@@ -10,6 +10,7 @@ kcal: 855
 protein_g: 55
 carbs_g: 66
 fat_g: 41
+added: 2026-10-18
 summary: Yogurt-marinated chicken breast charred in cast iron and finished in a blended tomato-cream gravy, with blistered stand-mixer naan from the same hot pan.
 glow: ["#c8452b", "#e0a22a", "#f2e6c8"]  # tomato gravy, garam masala, cream
 shop:

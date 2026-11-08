@@ -9,6 +9,7 @@ kcal: 610
 protein_g: 23
 carbs_g: 36
 fat_g: 40
+added: 2026-10-18
 summary: Golden cast iron potatoes, steamed under a lid and then browned, alongside big soft-curd scrambled eggs.
 glow: ["#f2c94a", "#c8742b", "#6aa13f"]  # egg, paprika potatoes, chives
 shop:

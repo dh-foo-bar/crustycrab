@@ -10,6 +10,7 @@ kcal: 980
 protein_g: 59
 carbs_g: 61
 fat_g: 56
+added: 2026-10-18
 summary: Citrus-braised pork shoulder shredded and broiled until crisp at the edges, piled into warm corn tortillas with a bright lime-cilantro slaw.
 glow: ["#b8401f", "#f0a33a", "#3f9a4a"]  # crisp pork, orange, cilantro
 shop:

@@ -10,6 +10,7 @@ kcal: 710
 protein_g: 57
 carbs_g: 75
 fat_g: 20
+added: 2026-10-18
 summary: Saudi spiced rice and chicken built in one wide braiser, the basmati cooked in a cardamom-and-cinnamon broth and steamed under foil with potatoes on top.
 glow: ["#d9822b", "#c8452b", "#e9d8b0"]  # kabsa spice, chili, basmati
 shop:

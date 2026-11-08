@@ -10,6 +10,7 @@ kcal: 1000
 protein_g: 58
 carbs_g: 58
 fat_g: 52
+added: 2026-10-18
 summary: Lamb shanks braised low in red wine and rosemary until they fall from the bone, served over buttery mash with parsley-flecked pickled red onions.
 glow: ["#6b1e2a", "#b8893a", "#4f7a3a"]  # red wine, braise, parsley
 shop:

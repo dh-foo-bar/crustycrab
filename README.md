@@ -22,6 +22,7 @@ kcal: 600                   # per serving
 protein_g: 45
 carbs_g: 60
 fat_g: 18
+added: 2026-01-15           # date published; recipes list newest first
 summary: One sentence shown on the card and under the title.
 shop:                       # optional; what to buy for one batch
   - { item: Chicken breast, qty: 1.5, unit: lb, section: meat }

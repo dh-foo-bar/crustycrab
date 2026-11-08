@@ -10,6 +10,7 @@ kcal: 495
 protein_g: 38
 carbs_g: 35
 fat_g: 23
+added: 2026-10-18
 summary: Creamy white bean chili with seared shredded chicken, green chiles and a bright serrano heat.
 glow: ["#e8e2d0", "#6aa13f", "#d9a62a"]  # white beans, serrano, cumin
 shop:

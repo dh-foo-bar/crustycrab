@@ -11,6 +11,7 @@ kcal: 630
 protein_g: 48
 carbs_g: 38
 fat_g: 31
+added: 2026-10-25
 summary: Bone-in chicken roasted with miso, chili crisp and honey butter under and over the skin, with smashed baby Yukons crisped in the pan drippings.
 glow: ["#c98a3a", "#c4321f", "#e9d8b0"]  # miso, chili crisp, potato
 shop:

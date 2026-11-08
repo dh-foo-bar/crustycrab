@@ -10,6 +10,7 @@ kcal: 535
 protein_g: 40
 carbs_g: 39
 fat_g: 21
+added: 2026-10-18
 summary: Roasted chicken breast sliced over stock-cooked rice with a bright lemon-garlic yogurt and scallions.
 glow: ["#f2d04a", "#e8e2d0", "#4f8a4b"]  # lemon, yogurt, scallion
 shop:

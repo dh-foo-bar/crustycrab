@@ -10,6 +10,7 @@ kcal: 380
 protein_g: 33
 carbs_g: 30
 fat_g: 14
+added: 2026-10-18
 summary: An old-fashioned meatloaf bound with onion soup mix, ketchup and bread crumbs, baked low and slow in a loaf pan.
 glow: ["#b8401f", "#d9a35a", "#6d8a3e"]  # ketchup glaze, crumb, parsley
 shop:
