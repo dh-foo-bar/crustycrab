@@ -2,79 +2,92 @@
 title: Chicken and Andouille Gumbo
 cuisine: Cajun
 protein: chicken
-protein_detail: Boneless, skinless chicken breast and andouille sausage
-servings: 10
+protein_detail: Boneless, skinless chicken thighs and andouille sausage
+servings: 6
 time_total: 2 hr 15 min
-time_active: 1 hr
-kcal: 600
-protein_g: 33
-carbs_g: 54
-fat_g: 26
+time_active: 1 hr 15 min
+kcal: 850
+protein_g: 53
+carbs_g: 58
+fat_g: 43
 added: 2026-10-18
-summary: A dark chocolate-brown roux, the holy trinity, smoky andouille and shredded chicken breast simmered into a deep, spicy gumbo over white rice.
+summary: Browned andouille and chicken thighs, a milk-chocolate roux, the holy trinity and a deep Cajun spice blend simmered into a spicy gumbo over basmati rice.
 glow: ["#5a3a2a", "#b8401f", "#4f8a4b"]  # dark roux, andouille, green onion
 shop:
-  - { item: Chicken breast, qty: 1.75, unit: lb, section: meat }
-  - { item: Andouille sausage, qty: 1.25, unit: lb, section: meat }
-  - { item: Yellow onion, qty: 1, unit: each, section: produce }
-  - { item: Green bell pepper, qty: 1, unit: each, section: produce }
+  - { item: Chicken thighs, qty: 2.5, unit: lb, section: meat }
+  - { item: Andouille sausage, qty: 0.75, unit: lb, section: meat }
+  - { item: Yellow onion, qty: 2, unit: each, section: produce }
+  - { item: Green bell pepper, qty: 2, unit: each, section: produce }
   - { item: Celery, qty: 4, unit: stalk, section: produce }
-  - { item: Garlic, qty: 5, unit: clove, section: produce }
+  - { item: Garlic, qty: 6, unit: clove, section: produce }
   - { item: Scallions, qty: 1, unit: bunch, section: produce }
   - { item: Parsley, qty: 0.5, unit: bunch, section: produce }
   - { item: Chicken stock, qty: 8, unit: cup, section: pantry }
-  - { item: Long-grain white rice, qty: 2.5, unit: cup, section: pantry }
+  - { item: Basmati rice, qty: 1.5, unit: cup, section: pantry }
+  - { item: Worcestershire sauce, qty: 1, unit: tbsp, section: pantry }
+  - { item: Hot sauce, section: pantry }
   - { item: Bay leaves, qty: 2, unit: each, section: spices }
-  - { item: Dried thyme, qty: 1.5, unit: tsp, section: spices }
-  - { item: Paprika, qty: 1, unit: tsp, section: spices }
-  - { item: Cayenne, qty: 0.75, unit: tsp, section: spices }
-  - { item: All-purpose flour, qty: 0.5625, unit: cup, section: staples }
-  - { item: Neutral oil, qty: 0.5625, unit: cup, section: staples }
+  - { item: Paprika, qty: 2, unit: tsp, section: spices }
+  - { item: Dried thyme, qty: 2, unit: tsp, section: spices }
+  - { item: Garlic powder, qty: 1, unit: tsp, section: spices }
+  - { item: Onion powder, qty: 1, unit: tsp, section: spices }
+  - { item: Dried oregano, qty: 1, unit: tsp, section: spices }
+  - { item: White pepper, qty: 1, unit: tsp, section: spices }
+  - { item: Cayenne, qty: 2, unit: tsp, section: spices }
+  - { item: Smoked paprika, qty: 0.5, unit: tsp, section: spices }
+  - { item: All-purpose flour, qty: 0.67, unit: cup, section: staples }
+  - { item: Neutral oil, qty: 0.75, unit: cup, section: staples }
   - { item: Kosher salt, qty: 2, unit: tsp, section: staples }
-  - { item: Black pepper, qty: 0.75, unit: tsp, section: staples }
+  - { item: Black pepper, qty: 1, unit: tsp, section: staples }
 ---
 
 ## Ingredients
 
-### Roux
+### Cajun spice blend
 
-- ½ cup plus 1 tbsp vegetable oil
-- ½ cup plus 1 tbsp all-purpose flour
+- 2 tsp sweet paprika
+- 2 tsp dried thyme
+- 1 tsp each black pepper, white pepper, garlic powder, onion powder and dried oregano
+- 1½–2 tsp cayenne
+- ½–1 tsp smoked paprika, optional
 
 ### Gumbo
 
-- 1¼ lb andouille sausage, sliced into ½ in rounds
-- 1¾ lb boneless, skinless chicken breasts, left whole
-- 1 large yellow onion, in ½ in dice
-- 1 large green bell pepper, in ½ in dice
-- 3–4 celery stalks, in ½ in dice
-- 4–5 garlic cloves, minced
-- 8 cups chicken stock
+- 2½ lb boneless, skinless chicken thighs, left whole
+- 12 oz andouille sausage, sliced into ¼ in rounds
+- ⅔ cup plus 1 tbsp neutral oil
+- ⅔ cup (85 g) all-purpose flour
+- 2 yellow onions, diced
+- 4 celery stalks, diced
+- 2 green bell peppers, diced
+- 6 garlic cloves, minced
+- 8 cups chicken stock, kept warm
 - 2 bay leaves
-- 1½ tsp dried thyme
-- 1 tsp paprika
-- ¾ tsp cayenne, adjusted to taste
-- ¾ tsp black pepper
-- Salt
-- 4–5 green onions, sliced
-- ⅓ cup chopped parsley
-- Filé powder, optional, for serving
-- Cooked white rice, to serve
+- 1 tbsp Worcestershire sauce
+- Kosher salt
+- Sliced scallions and chopped parsley, to finish
+- Hot sauce, for the table
+
+### Rice
+
+- 1½ cups basmati or other long-grain white rice, rinsed
 
 ## Steps
 
-1. **Prep.** Dice the onion, bell pepper and celery, mince the garlic, slice the green onions and chop the parsley before you start the roux; once it's going you can't step away.
-2. **Make the roux.** Heat the oil in a Dutch oven over medium heat and gradually whisk in the flour. Stir constantly for 25–35 minutes, until it turns a deep chocolate brown. Lower the heat if it darkens too fast; burnt roux means starting over.
-3. **Add the trinity.** Add the onion, bell pepper and celery and cook 5–7 minutes, until softened. Add the garlic and cook 1–2 minutes, until fragrant.
-4. **Add the stock.** Pour in the stock slowly, stirring constantly so the roux incorporates smoothly.
-5. **Simmer.** Add the sausage, whole chicken breasts, bay leaves, thyme, paprika, cayenne and black pepper. Bring to a boil, then lower to a simmer and cook uncovered about 45 minutes, stirring occasionally.
-6. **Shred the chicken.** Lift out the chicken, shred it, and return it to the pot. Simmer another 15–20 minutes to let the flavors meld.
-7. **Season and finish.** Remove the bay leaves, adjust the salt and cayenne, and stir in the green onions and parsley just before serving.
-8. **Serve.** Ladle over white rice, with filé powder on the side.
+1. **Prep.** Mix the spice blend, dice the vegetables, mince the garlic, slice the sausage and warm the stock. Once the roux starts you can't step away.
+2. **Brown the meat.** In a large Dutch oven, brown the andouille in 1 tbsp oil, about 5 minutes; remove. Season the thighs with 1 tbsp of the spice blend and 1½ tsp salt and brown them in batches, 3–4 minutes per side (not cooked through); set aside.
+3. **Make the roux.** Add the ⅔ cup oil to the drippings, then the flour. Stir constantly over medium heat with a flat-edged wooden spoon, scraping the corners, 35–45 minutes, through peanut butter and copper to milk chocolate. Lower the heat if it smokes; black specks mean it has burned and must be restarted.
+4. **Add the trinity.** Add the onion, celery and bell pepper all at once to stop the roux from darkening. Cook 6–8 minutes, until soft. Add the garlic and the rest of the spice blend and cook 1 minute.
+5. **Add the stock.** Whisk in the warm stock a cup at a time, letting each addition smooth out before the next. Add the bay leaves, Worcestershire, sausage and whole thighs.
+6. **Simmer.** Simmer gently, uncovered, about 1 hour, stirring occasionally and skimming off the oil that rises to the surface.
+7. **Cook the rice.** About 30 minutes before serving, cook the rice, keeping it slightly firm.
+8. **Shred and finish.** Lift out the thighs, shred them with two forks and return them to the pot. Simmer 10 minutes more. Remove the bay leaves, then adjust salt and cayenne. The gumbo should coat a spoon like a thin gravy: add stock if it's too thick, or simmer longer if it's thin.
+9. **Serve.** Ladle over rice and top with scallions and parsley, with hot sauce on the side.
 
 ## Notes
 
-- **Breast, not thighs:** adding the breasts whole and pulling them after about 45 minutes keeps the lean meat from drying out.
-- **Heat level:** ¼ tsp cayenne is mild, ½ tsp medium, ¾ tsp a traditional medium-hot, and 1 tsp or more hot.
-- **The pot:** a heavy Dutch oven gives the most control over the roux.
-- **Freezes well** for up to 3 months.
+- **Thighs:** browned whole and shredded at the end, they stay tender through the long simmer.
+- **Roux color:** milk chocolate gives a deep, toasty flavor; darker roux thickens less.
+- **Skim the fat:** much of the roux oil rises during the simmer; skimming it keeps the gumbo from tasting greasy.
+- **Lighter:** serve with ½ cup cooked rice per bowl or use 8 oz andouille.
+- **Better the next day** and freezes well for up to 3 months.
