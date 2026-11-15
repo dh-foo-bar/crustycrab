@@ -27,29 +27,29 @@ shop:
   - { item: Worcestershire sauce, qty: 1, unit: tbsp, section: pantry }
   - { item: Hot sauce, section: pantry }
   - { item: Bay leaves, qty: 2, unit: each, section: spices }
-  - { item: Paprika, qty: 2, unit: tsp, section: spices }
-  - { item: Dried thyme, qty: 2, unit: tsp, section: spices }
-  - { item: Garlic powder, qty: 1, unit: tsp, section: spices }
-  - { item: Onion powder, qty: 1, unit: tsp, section: spices }
-  - { item: Dried oregano, qty: 1, unit: tsp, section: spices }
-  - { item: White pepper, qty: 1, unit: tsp, section: spices }
-  - { item: Cayenne, qty: 2, unit: tsp, section: spices }
-  - { item: Smoked paprika, qty: 0.5, unit: tsp, section: spices }
+  - { item: Paprika, qty: 4, unit: tsp, section: spices }
+  - { item: Dried thyme, qty: 4, unit: tsp, section: spices }
+  - { item: Garlic powder, qty: 2, unit: tsp, section: spices }
+  - { item: Onion powder, qty: 2, unit: tsp, section: spices }
+  - { item: Dried oregano, qty: 2, unit: tsp, section: spices }
+  - { item: White pepper, qty: 2, unit: tsp, section: spices }
+  - { item: Cayenne, qty: 4, unit: tsp, section: spices }
+  - { item: Smoked paprika, qty: 1, unit: tsp, section: spices }
   - { item: All-purpose flour, qty: 0.67, unit: cup, section: staples }
   - { item: Neutral oil, qty: 0.75, unit: cup, section: staples }
-  - { item: Kosher salt, qty: 2, unit: tsp, section: staples }
-  - { item: Black pepper, qty: 1, unit: tsp, section: staples }
+  - { item: Kosher salt, qty: 3, unit: tsp, section: staples }
+  - { item: Black pepper, qty: 2, unit: tsp, section: staples }
 ---
 
 ## Ingredients
 
 ### Cajun spice blend
 
-- 2 tsp sweet paprika
-- 2 tsp dried thyme
-- 1 tsp each black pepper, white pepper, garlic powder, onion powder and dried oregano
-- 1½–2 tsp cayenne
-- ½–1 tsp smoked paprika, optional
+- 4 tsp sweet paprika
+- 4 tsp dried thyme
+- 2 tsp each black pepper, white pepper, garlic powder, onion powder and dried oregano
+- 3–4 tsp cayenne
+- 1 tsp smoked paprika, optional
 
 ### Gumbo
 
@@ -75,19 +75,20 @@ shop:
 ## Steps
 
 1. **Prep.** Mix the spice blend, dice the vegetables, mince the garlic, slice the sausage and warm the stock. Once the roux starts you can't step away.
-2. **Brown the meat.** In a large Dutch oven, brown the andouille in 1 tbsp oil, about 5 minutes; remove. Season the thighs with 1 tbsp of the spice blend and 1½ tsp salt and brown them in batches, 3–4 minutes per side (not cooked through); set aside.
+2. **Brown the meat.** In a large Dutch oven, brown the andouille in 1 tbsp oil, about 5 minutes; remove. Season the thighs with 2 tbsp of the spice blend and 1½ tsp salt and brown them in batches, 3–4 minutes per side (not cooked through); set aside.
 3. **Make the roux.** Add the ⅔ cup oil to the drippings, then the flour. Stir constantly over medium heat with a flat-edged wooden spoon, scraping the corners, 35–45 minutes, through peanut butter and copper to milk chocolate. Lower the heat if it smokes; black specks mean it has burned and must be restarted.
 4. **Add the trinity.** Add the onion, celery and bell pepper all at once to stop the roux from darkening. Cook 6–8 minutes, until soft. Add the garlic and the rest of the spice blend and cook 1 minute.
 5. **Add the stock.** Whisk in the warm stock a cup at a time, letting each addition smooth out before the next. Add the bay leaves, Worcestershire, sausage and whole thighs.
 6. **Simmer.** Simmer gently, uncovered, about 1 hour, stirring occasionally and skimming off the oil that rises to the surface.
 7. **Cook the rice.** About 30 minutes before serving, cook the rice, keeping it slightly firm.
-8. **Shred and finish.** Lift out the thighs, shred them with two forks and return them to the pot. Simmer 10 minutes more. Remove the bay leaves, then adjust salt and cayenne. The gumbo should coat a spoon like a thin gravy: add stock if it's too thick, or simmer longer if it's thin.
+8. **Shred and finish.** Lift out the thighs, shred them with two forks and return them to the pot. Simmer 10 minutes more. Remove the bay leaves, then taste: a flat or watery taste usually needs more salt and spice blend. The gumbo should coat a spoon like a thin gravy: add stock if it's too thick; if it's thin, boil it hard, uncovered, for 5–10 minutes with the chicken out before shredding.
 9. **Serve.** Ladle over rice and top with scallions and parsley, with hot sauce on the side.
 
 ## Notes
 
 - **Thighs:** browned whole and shredded at the end, they stay tender through the long simmer.
-- **Roux color:** milk chocolate gives a deep, toasty flavor; darker roux thickens less.
+- **Roux color:** milk chocolate gives a deep, toasty flavor; darker roux thickens less. It stays pale for the first 15 minutes, then darkens quickly, so hold a steady medium heat rather than turning it up late.
+- **Bone-in thighs:** use about 3¼ lb, remove the skin, simmer them whole with the bones, then shred and discard the bones.
 - **Skim the fat:** much of the roux oil rises during the simmer; skimming it keeps the gumbo from tasting greasy.
 - **Lighter:** serve with ½ cup cooked rice per bowl or use 8 oz andouille.
 - **Better the next day** and freezes well for up to 3 months.
